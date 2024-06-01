@@ -1,0 +1,48 @@
+.menubar {
+  background-color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & > hgroup {
+    display: flex;
+
+    & > h1 {
+      font-size: inherit;
+      padding-inline: 0.5rem;
+    }
+
+    & > details {
+      cursor: default;
+
+      & > summary {
+        list-style-type: none;
+        padding-inline: 0.5rem;
+      }
+
+      &[open] {
+        background-color: deepskyblue;
+      }
+
+      & > menu {
+        position: absolute;
+        padding: 0;
+        background: white;
+        list-style-type: none;
+
+        & > li {
+          padding-inline: 0.5rem;
+
+          &:hover {
+            background-color: deepskyblue;
+          }
+
+          & > a {
+            all: unset;
+          }
+        }
+      }
+    }
+  }
+}

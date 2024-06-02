@@ -5,6 +5,7 @@ export default function MenuBar() {
     <header className={styles.menubar}>
       <hgroup>
         <h1>James Sartelle</h1>
+
         <details name="menubar">
           <summary>About Me</summary>
           <menu>
@@ -12,6 +13,7 @@ export default function MenuBar() {
             <li>Oklahoma City, OK</li>
           </menu>
         </details>
+
         <details name="menubar">
           <summary>Contact</summary>
           <menu>
@@ -27,7 +29,12 @@ export default function MenuBar() {
             </li>
             <li>
               <a target="_blank" href="https://github.com/jsartelle">
-                Open github.com/jsartelle...
+                Open GitHub (jsartelle)...
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/in/james-sartelle/">
+                Open LinkedIn...
               </a>
             </li>
           </menu>

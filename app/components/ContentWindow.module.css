@@ -1,0 +1,26 @@
+.window {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+
+  & > header {
+    height: 1.5rem;
+    background: lightgray;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & > h2 {
+      font-size: inherit;
+    }
+  }
+}
+
+.content {
+  flex-grow: 1;
+  overflow: scroll;
+  padding: 1rem;
+}

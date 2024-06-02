@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import TigerBG from '@/public/10-4.webp' // TODO put credits for this image somewhere - https://512pixels.net/projects/default-mac-wallpapers-in-5k/
+import TigerBG from '@/public/10-4.webp'
 import { Lunasima } from 'next/font/google'
 import './globals.css'
 
@@ -33,7 +33,7 @@ export default function RootLayout({
           style={{ objectFit: 'cover' }}
           draggable="false"
         />
-        <div id="root">{children}</div>
+        {children}
       </body>
     </html>
   )

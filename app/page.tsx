@@ -29,7 +29,6 @@ export default function Home() {
             <h3>Languages</h3>
 
             <div className={styles.skillGrid}>
-              {/* TODO wrap skill cards in hover effect */}
               <SkillCard logo={HTML5Logo} title="HTML5" progress={5} />
               <SkillCard logo={CSSLogo} title="CSS" progress={5} />
               <SkillCard logo={SassLogo} title="Sass" progress={5} />
@@ -190,9 +189,9 @@ export default function Home() {
                   with third party data providers like Facebook.
                 </li>
                 <li>
-                  Wrote comprehensive documentation on Mood’s platform and APIs
-                  for both internal and external users. Mentored and directed
-                  junior developers remotely.
+                  Documented Mood’s platform and APIs for both internal and
+                  external users. Mentored and directed junior developers
+                  remotely.
                 </li>
               </ul>
             </article>
@@ -212,10 +211,10 @@ export default function Home() {
                   and back-end controllers using <strong>TypeScript</strong>.
                 </li>
                 <li>
-                  Designed and implemented an automated email service, including
+                  Designed and implemented an automated email service, including{' '}
                   <strong>SQL</strong> scripts and stored procedures, and
-                  back-end code in <strong>C#</strong>
-                  using <strong>ASP.NET</strong>.
+                  back-end code in <strong>C#</strong> using{' '}
+                  <strong>ASP.NET</strong>.
                 </li>
                 <li>
                   Wrote extensive unit tests for front-end code using{' '}

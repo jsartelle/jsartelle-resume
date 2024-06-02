@@ -2,9 +2,9 @@
 
 @layer reset {
   /*
-  Josh's Custom CSS Reset
+  Josh's Custom CSS Reset (modified)
   https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+  */
   *,
   *::before,
   *::after {
@@ -47,6 +47,25 @@
 }
 
 @layer base {
+  @media print {
+    * {
+      -webkit-user-select: auto !important;
+      -moz-user-select: auto !important;
+      -ms-user-select: auto !important;
+      user-select: auto !important;
+    }
+
+    .print-hidden {
+      display: none;
+    }
+  }
+
+  @media not print {
+    .print-only {
+      display: none;
+    }
+  }
+
   :root {
     --font-scale: 1.125;
   }
@@ -68,11 +87,4 @@
   h6 {
     font-size: calc(1rem * pow(var(--font-scale), 3));
   }
-  #background {
-    @media print {
-      display: none;
-    }
-  }
-}
-
 }

@@ -5,16 +5,20 @@
   background-color: white;
 
   & > header {
-    height: 1.5rem;
     background: lightgray;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media not print {
+      height: 1.5rem;
+    }
 
     & > h2 {
-      font-size: inherit;
+      @media not print {
+        font-size: inherit;
+      }
     }
   }
 }

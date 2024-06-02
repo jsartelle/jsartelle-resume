@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Image
-          id="background"
+          className="print-hidden"
           alt=""
           src={TigerBG}
           placeholder="blur"

@@ -38,7 +38,7 @@
         & > li {
           padding-inline: 0.5rem;
 
-          &:hover {
+          &:hover, &:focus-within {
             background-color: deepskyblue;
           }
 

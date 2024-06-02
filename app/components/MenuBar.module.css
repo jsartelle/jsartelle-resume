@@ -1,52 +1,80 @@
 .menubar {
+  display: flex;
   background-color: white;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  padding-inline: 0.5rem;
 
-  & > hgroup {
-    display: flex;
-
-    & > h1 {
+  & > :where(h1) {
+    @media not print {
       font-size: inherit;
       padding-inline: 0.5rem;
     }
+    @media print {
+      padding-inline: 1rem;
+    }
+  }
 
-    & > details {
-      cursor: default;
+  & > :where(button) {
+    border: none;
+    background: none;
+    padding-block: 0;
+    padding-inline: 0.5rem;
 
-      & > summary {
-        list-style-type: none;
+    &:active {
+      background: deepskyblue;
+    }
+  }
+
+  & > :where(details) {
+    cursor: default;
+
+    & > summary {
+      list-style-type: none;
+      padding-inline: 0.5rem;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] {
+      background: deepskyblue;
+    }
+
+    & > menu {
+      position: absolute;
+      padding: 0;
+      background: white;
+      list-style-type: none;
+
+      & > li {
         padding-inline: 0.5rem;
 
-        &::-webkit-details-marker {
-          display: none;
+        &:hover,
+        &:focus-within {
+          background: deepskyblue;
         }
-      }
 
-      &[open] {
-        background-color: deepskyblue;
-      }
-
-      & > menu {
-        position: absolute;
-        padding: 0;
-        background: white;
-        list-style-type: none;
-
-        & > li {
-          padding-inline: 0.5rem;
-
-          &:hover, &:focus-within {
-            background-color: deepskyblue;
-          }
-
-          & > a {
-            all: unset;
-          }
+        & > a {
+          all: unset;
         }
       }
     }
   }
+}
+
+.profileIcon {
+  -webkit-padding-end: 0.5rem;
+  padding-inline-end: 0.5rem;
+}
+
+.printButton {
+  border-radius: 50%;
+  background: deepskyblue;
+  color: white;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
 }

@@ -11,7 +11,7 @@
   overflow: hidden;
   padding: 1rem;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   /* TODO find a way to offset the windows, but only if multi column */
 }
 

@@ -47,3 +47,33 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
+
+.popoverBio {
+  display: flex;
+  flex-direction: column;
+}
+
+.popoverBioImage {
+  align-self: center;
+}
+
+.popoverBioName {
+  text-align: center;
+  font-size: calc(1rem * pow(var(--font-scale), 4));
+}
+
+.popoverBioFooter {
+  text-align: center;
+  /* TODO consistent secondary text style for this and SkillCard */
+}
+
+.siteCreditsPopover {
+  /* FIXME avoid needing !important */
+  width: min(500px, 100vw) !important;
+}
+
+.printBioContactList {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+}

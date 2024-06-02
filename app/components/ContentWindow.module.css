@@ -21,6 +21,18 @@
       }
     }
   }
+
+  &[popover] {
+    margin: auto;
+    padding: 0;
+    max-height: 100dvh;
+    width: min(300px, 100vw);
+    border: none;
+
+    &:not(:popover-open) {
+      display: none;
+    }
+  }
 }
 
 .content {

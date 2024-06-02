@@ -71,6 +71,10 @@
   padding-inline-end: 0.5rem;
 }
 
+.menubar:has(~ :global(#aboutWindowPopover):popover-open) .aboutButton {
+  background: deepskyblue;
+}
+
 .printButton {
   border-radius: 50%;
   background: deepskyblue;

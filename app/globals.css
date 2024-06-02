@@ -56,13 +56,13 @@
     }
 
     .print-hidden {
-      display: none;
+      display: none !important;
     }
   }
 
   @media not print {
     .print-only {
-      display: none;
+      display: none !important;
     }
   }
 

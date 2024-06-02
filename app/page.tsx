@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import Image from 'next/image'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 import SkillCard from '@/app/components/SkillCard'
@@ -18,16 +19,56 @@ import SvelteLogo from '@/public/logos/Svelte.svg'
 import TailwindLogo from '@/public/logos/Tailwind.svg'
 import JestLogo from '@/public/logos/Jest.svg'
 
+/* TODO make this HTML and add hobbies and stuff */
+const bio =
+  "I'm a full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!"
+
 export default function Home() {
   return (
     <div id="root" className={styles.root}>
       <MenuBar />
 
       <main className={styles.desktop}>
+        {/* print only bio */}
+        <ContentWindow className="print-only" title="About Me">
+          {bio}
+          <br />
+          <br />
+          <ul className={styles.printBioContactList}>
+            <li>
+              {/* TODO add icons instead of labels */}
+              Phone:{' '}
+              <a target="_blank" href="tel:9806229704">
+                980-622-9704
+              </a>
+            </li>
+            <li>
+              Email:{' '}
+              <a target="_blank" href="mailto:jamessartelle@me.com">
+                jamessartelle@me.com
+              </a>
+            </li>
+            <li>
+              GitHub:{' '}
+              <a target="_blank" href="https://github.com/jsartelle">
+                jsartelle
+              </a>
+            </li>
+            <li>
+              LinkedIn:{' '}
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/james-sartelle/"
+              >
+                https://www.linkedin.com/in/james-sartelle/
+              </a>
+            </li>
+          </ul>
+        </ContentWindow>
+
         <ContentWindow title="Skills">
           <section>
             <h3>Languages</h3>
-
             <div className={styles.skillGrid}>
               <SkillCard logo={HTML5Logo} title="HTML5" progress={5} />
               <SkillCard logo={CSSLogo} title="CSS" progress={5} />
@@ -88,7 +129,11 @@ export default function Home() {
 
             <article>
               <hgroup>
-                <h4>Extra Card</h4>
+                <h4>
+                  <a target="_blank" href="https://extra.app/">
+                    Extra Card
+                  </a>
+                </h4>
                 <p>Remote</p>
                 <p>January 2022 - June 2024</p>
               </hgroup>
@@ -145,7 +190,11 @@ export default function Home() {
 
             <article>
               <hgroup>
-                <h4>Digichief</h4>
+                <h4>
+                  <a target="_blank" href="https://www.digichief.com/">
+                    Digichief
+                  </a>
+                </h4>
                 <p>Remote</p>
                 <p>May 2018 - March 2024</p>
               </hgroup>
@@ -164,7 +213,11 @@ export default function Home() {
 
             <article>
               <hgroup>
-                <h4>Mood Media</h4>
+                <h4>
+                  <a target="_blank" href="https://us.moodmedia.com/">
+                    Mood Media
+                  </a>
+                </h4>
                 <p>Fort Mill, SC</p>
                 <p>June 2016 - January 2022</p>
               </hgroup>
@@ -199,7 +252,11 @@ export default function Home() {
 
             <article>
               <hgroup>
-                <h4>Charles Schwab</h4>
+                <h4>
+                  <a target="_blank" href="https://www.schwab.com/">
+                    Charles Schwab
+                  </a>
+                </h4>
                 <p>Charlotte, NC</p>
                 <p>August 2015 - June 2016</p>
               </hgroup>
@@ -246,6 +303,155 @@ export default function Home() {
           </section>
         </ContentWindow>
       </main>
+
+      <ContentWindow
+        tag="article"
+        id="aboutWindowPopover"
+        className="print-hidden"
+        popover="auto"
+        contentClassName={styles.popoverBio}
+        title="About Me"
+      >
+        {/* TODO photo here */}
+        <Image
+          className={styles.popoverBioImage}
+          src={JavaScriptLogo}
+          height={75}
+          width={75}
+        ></Image>
+
+        <div className={styles.popoverBioName}>James Sartelle</div>
+        {bio}
+
+        <button popoverTarget="siteCreditsPopover">Site Credits...</button>
+
+        <footer className={styles.popoverBioFooter}>
+          ©️ 2024 James Sartelle
+        </footer>
+      </ContentWindow>
+
+      <ContentWindow
+        tag="article"
+        id="siteCreditsPopover"
+        className={styles.siteCreditsPopover}
+        popover="auto"
+        title="Site Credits"
+      >
+        <h1>Knowledge</h1>
+        <ul>
+          <li>
+            CSS Reset:{' '}
+            <a href="https://www.joshwcomeau.com/css/custom-css-reset/">
+              https://www.joshwcomeau.com/css/custom-css-reset/
+            </a>
+          </li>
+          <li>
+            Font size scale:{' '}
+            <a href="https://notadesigner.io/p/typographic-scales">
+              https://notadesigner.io/p/typographic-scales
+            </a>
+          </li>
+        </ul>
+        <h1>Resources</h1>
+        <ul>
+          <li>
+            Lunasima font:{' '}
+            <a href="https://fonts.google.com/specimen/Lunasima">
+              https://fonts.google.com/specimen/Lunasima
+            </a>
+          </li>
+          <li>
+            Tiger wallpaper:{' '}
+            <a href="https://512pixels.net/projects/default-mac-wallpapers-in-5k/">
+              https://512pixels.net/projects/default-mac-wallpapers-in-5k/
+            </a>
+          </li>
+        </ul>
+        <h2>Logos</h2>
+        <ul>
+          <li>
+            HTML5: W3C, CC BY 3.0{' '}
+            <a href="https://creativecommons.org/licenses/by/3.0">
+              https://creativecommons.org/licenses/by/3.0
+            </a>
+            , via Wikimedia Commons
+          </li>
+          <li>
+            CSS: Rudloff, CC BY 3.0{' '}
+            <a href="https://creativecommons.org/licenses/by/3.0">
+              https://creativecommons.org/licenses/by/3.0
+            </a>
+            , via Wikimedia Commons
+          </li>
+          <li>
+            Sass: <a href="http://sass-lang.com/">http://sass-lang.com/</a>,
+            Public domain, via Wikimedia Commons
+          </li>
+          <li>
+            JavaScript: Christopher Williams, Public domain, via Wikimedia
+            Commons
+          </li>
+          <li>TypeScript: TypeScript, Public domain, via Wikimedia Commons</li>
+          <li>
+            Shell (Bash): Free Software Foundation, FAL, via Wikimedia Commons
+          </li>
+          <li>Swift: The Swift logo is a trademark of Apple Inc.</li>
+          <li>React: Meta Platforms, Public domain, via Wikimedia Commons</li>
+          <li>React Native: Facebook, Public domain, via Wikimedia Commons</li>
+          <li>
+            Vue: Evan You,{' '}
+            <a href="https://github.com/yyx990803">
+              https://github.com/yyx990803
+            </a>
+            , CC BY 4.0{' '}
+            <a href="https://creativecommons.org/licenses/by/4.0">
+              https://creativecommons.org/licenses/by/4.0
+            </a>
+            , via Wikimedia Commons
+          </li>
+          <li>
+            Svelte:{' '}
+            <a href="https://github.com/sveltejs/svelte/graphs/contributors">
+              these people
+            </a>
+            , MIT{' '}
+            <a href="http://opensource.org/licenses/mit-license.php">
+              http://opensource.org/licenses/mit-license.php
+            </a>
+            , via Wikimedia Commons
+          </li>
+          <li>
+            Tailwind: Tailwind CSS, CC BY-SA 4.0{' '}
+            <a href="https://creativecommons.org/licenses/by-sa/4.0">
+              https://creativecommons.org/licenses/by-sa/4.0
+            </a>
+            , via Wikimedia Commons
+          </li>
+          <li>Jest: Copyright OpenJS Foundation and Jest contributors.</li>
+          <li>SQL:</li>
+        </ul>
+        <p>
+          Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022
+          as part of Feather (MIT). All other copyright (c) for Lucide are held
+          by Lucide Contributors 2022.
+        </p>
+        <p>
+          Permission to use, copy, modify, and/or distribute this software for
+          any purpose with or without fee is hereby granted, provided that the
+          above copyright notice and this permission notice appear in all
+          copies.
+        </p>
+        <p>
+          THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS
+          ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+          WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+          AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+          DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+          PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+          TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+          PERFORMANCE OF THIS SOFTWARE.
+        </p>
+      </ContentWindow>
     </div>
   )
 }

@@ -10,8 +10,8 @@ export default function MenuBar() {
 
       <h1 className={styles.name}>James Sartelle</h1>
 
-      <button popoverTarget="aboutWindowPopover" className="print-hidden">
-        About Me
+      <button popoverTarget="aboutWindowPopover" className={[styles.aboutButton, 'print-hidden'].join(' ')}>
+        About
       </button>
 
       <details name="menubar" className="print-hidden">

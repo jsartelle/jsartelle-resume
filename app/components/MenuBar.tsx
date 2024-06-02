@@ -44,7 +44,10 @@ export default function MenuBar() {
       </details>
 
       {/* TODO make this a functional Print button */}
-      <button className={[styles.printButton, 'print-hidden'].join(' ')}>
+      <button
+        className={[styles.printButton, 'print-hidden'].join(' ')}
+        aria-label="Print"
+      >
         <Printer />
       </button>
     </header>

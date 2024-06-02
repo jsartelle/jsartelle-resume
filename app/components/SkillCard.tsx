@@ -16,7 +16,7 @@ export default function SkillCard({
 }: SkillCardProps) {
   return (
     <article className={styles.skillCard}>
-      <Image alt={`${title} Logo`} src={logo} width={50} height={50} />
+      <Image alt="" src={logo} width={50} height={50} />
       <hgroup>
         <h4>{title}</h4>
         {secondary ? <p>{secondary}</p> : null}

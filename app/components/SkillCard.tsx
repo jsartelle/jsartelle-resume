@@ -16,12 +16,19 @@ export default function SkillCard({
 }: SkillCardProps) {
   return (
     <article className={styles.skillCard}>
-      <Image alt="" src={logo} width={50} height={50} />
+      <Image
+        className={styles.logo}
+        alt=""
+        src={logo}
+        width={50}
+        height={50}
+        draggable="false"
+      />
       <hgroup>
         <h4>{title}</h4>
-        {secondary ? <p>{secondary}</p> : null}
+        {secondary ? <p className={styles.secondary}>{secondary}</p> : null}
       </hgroup>
-      <progress value={progress} max="5"></progress>
+      <progress className={styles.progress} value={progress} max="5"></progress>
     </article>
   )
 }

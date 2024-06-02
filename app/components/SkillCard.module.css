@@ -3,7 +3,6 @@
   align-items: center;
   padding: 1rem;
   background: lightgray;
-  -moz-column-gap: 1rem;
   gap: 1rem;
   grid-template: auto auto / 50px auto;
 }

@@ -6,6 +6,7 @@ export default function MenuBar() {
       <hgroup>
         <h1>James Sartelle</h1>
 
+        {/* Once CSS Anchor Positioning is widely available, the menubar can be changed to use popovers which will close if you click outside them. But alas, it's Chromium only for now */}
         <details name="menubar">
           <summary>About Me</summary>
           <menu>

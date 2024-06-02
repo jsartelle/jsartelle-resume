@@ -19,6 +19,10 @@
       & > summary {
         list-style-type: none;
         padding-inline: 0.5rem;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
       }
 
       &[open] {

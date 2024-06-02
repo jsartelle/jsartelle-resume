@@ -11,17 +11,8 @@
   overflow: hidden;
   padding: 1rem;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-
-  & > :first-child {
-    -webkit-margin-after: 2rem;
-    margin-block-end: 2rem;
-  }
-
-  & > :last-child {
-    -webkit-margin-before: 2rem;
-    margin-block-start: 2rem;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* TODO find a way to offset the windows, but only if multi column */
 }
 
 .skillGrid {

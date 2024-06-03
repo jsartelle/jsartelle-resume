@@ -20,6 +20,83 @@ import SvelteLogo from '@/public/logos/Svelte.svg'
 import TailwindLogo from '@/public/logos/Tailwind.svg'
 import JestLogo from '@/public/logos/Jest.svg'
 
+export default function Home() {
+  return (
+    <div id="root" className={styles.root}>
+      <MenuBar />
+
+      <main className={styles.desktop}>
+        {/* print only bio */}
+        <ContentWindow className="print-only" title="About Me">
+          {bio}
+          <br />
+          <br />
+          {printBioContacts}
+        </ContentWindow>
+
+        <ContentWindow title="Skills" contentClassName={styles.resumeContent}>
+          {languagesSection}
+          {frameworksSection}
+        </ContentWindow>
+
+        {/* TODO page break? */}
+        <ContentWindow title="History" contentClassName={styles.resumeContent}>
+          <section>
+            <h3>Experience</h3>
+            {experienceExtra}
+            {experienceDigichief}
+            {experienceMood}
+            {experienceSchwab}
+          </section>
+
+          <section>
+            <h3>Education</h3>
+            {experienceUNC}
+          </section>
+        </ContentWindow>
+      </main>
+
+      <ContentWindow
+        tag="article"
+        id="aboutWindowPopover"
+        className="print-hidden"
+        popover="auto"
+        contentClassName={styles.popoverBio}
+        title="About Me"
+      >
+        <Image
+          className={styles.popoverBioImage}
+          src={Photo}
+          alt="A photo of myself"
+          height={75}
+          width={75}
+        ></Image>
+
+        <div className={styles.popoverBioName}>James Sartelle</div>
+        {bio}
+
+        <button popoverTarget="siteCreditsPopover">Site Credits...</button>
+
+        <footer className={styles.popoverBioFooter}>
+          <div>©️ 2024 James Sartelle</div>
+          <div>All Rights Reserved.</div>
+        </footer>
+      </ContentWindow>
+
+      <ContentWindow
+        tag="article"
+        id="siteCreditsPopover"
+        className={styles.siteCreditsPopover}
+        contentClassName={styles.siteCredits}
+        popover="auto"
+        title="Site Credits"
+      >
+        {credits}
+      </ContentWindow>
+    </div>
+  )
+}
+
 /* TODO make this HTML and add hobbies and stuff */
 const bio =
   "A full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!"
@@ -392,79 +469,3 @@ const credits = (
   </>
 )
 
-export default function Home() {
-  return (
-    <div id="root" className={styles.root}>
-      <MenuBar />
-
-      <main className={styles.desktop}>
-        {/* print only bio */}
-        <ContentWindow className="print-only" title="About Me">
-          {bio}
-          <br />
-          <br />
-          {printBioContacts}
-        </ContentWindow>
-
-        <ContentWindow title="Skills" contentClassName={styles.resumeContent}>
-          {languagesSection}
-          {frameworksSection}
-        </ContentWindow>
-
-        {/* TODO page break? */}
-        <ContentWindow title="History" contentClassName={styles.resumeContent}>
-          <section>
-            <h3>Experience</h3>
-            {experienceExtra}
-            {experienceDigichief}
-            {experienceMood}
-            {experienceSchwab}
-          </section>
-
-          <section>
-            <h3>Education</h3>
-            {experienceUNC}
-          </section>
-        </ContentWindow>
-      </main>
-
-      <ContentWindow
-        tag="article"
-        id="aboutWindowPopover"
-        className="print-hidden"
-        popover="auto"
-        contentClassName={styles.popoverBio}
-        title="About Me"
-      >
-        <Image
-          className={styles.popoverBioImage}
-          src={Photo}
-          alt='A photo of myself'
-          height={75}
-          width={75}
-        ></Image>
-
-        <div className={styles.popoverBioName}>James Sartelle</div>
-        {bio}
-
-        <button popoverTarget="siteCreditsPopover">Site Credits...</button>
-
-        <footer className={styles.popoverBioFooter}>
-          <div>©️ 2024 James Sartelle</div>
-          <div>All Rights Reserved.</div>
-        </footer>
-      </ContentWindow>
-
-      <ContentWindow
-        tag="article"
-        id="siteCreditsPopover"
-        className={styles.siteCreditsPopover}
-        contentClassName={styles.siteCredits}
-        popover="auto"
-        title="Site Credits"
-      >
-        {credits}
-      </ContentWindow>
-    </div>
-  )
-}

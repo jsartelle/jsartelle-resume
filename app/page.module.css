@@ -63,6 +63,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+
+  @media print {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .experienceHead {
@@ -101,8 +105,8 @@
 }
 
 .popoverBioFooter {
+  color: var(--text-secondary);
   text-align: center;
-  /* TODO consistent secondary text style for this and SkillCard */
 }
 
 .siteCreditsPopover {

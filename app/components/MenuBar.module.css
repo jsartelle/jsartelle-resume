@@ -13,6 +13,8 @@
       padding-inline: 0.5rem;
     }
     @media print {
+      flex-grow: 1;
+      text-align: center;
       padding-inline: 1rem;
     }
   }

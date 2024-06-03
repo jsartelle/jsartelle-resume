@@ -7,14 +7,26 @@
   column-gap: 1rem;
   row-gap: 0.5rem;
   grid-template: auto auto / 50px auto;
+
+  @media print {
+    grid-template: auto / 25px auto;
+    row-gap: 0;
+  }
 }
 
 .logo {
-  grid-row: span 2;
+  @media screen {
+    grid-row: span 2;
+  }
+
+  @media print {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .secondary {
-  color: hsl(0, 0%, 20%);
+  color: var(--text-secondary);
   font-size: 1.25rem;
 }
 

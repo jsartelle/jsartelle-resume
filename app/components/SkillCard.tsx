@@ -28,8 +28,11 @@ export default function SkillCard({
         <h4>{title}</h4>
         {secondary ? <p className={styles.secondary}>{secondary}</p> : null}
       </hgroup>
-	  {/* TODO for print hide progress bar, shrink logos to icons next to text */}
-      <progress className={styles.progress} value={progress} max="5"></progress>
+      <progress
+        className={[styles.progress, 'print-hidden'].join(' ')}
+        value={progress}
+        max="5"
+      ></progress>
     </article>
   )
 }

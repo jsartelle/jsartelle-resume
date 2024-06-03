@@ -47,7 +47,22 @@
 }
 
 @layer base {
+  @media screen {
+    :root {
+      --font-scale: 1.125;
+    }
+
+    .print-only {
+      display: none !important;
+    }
+  }
+
   @media print {
+    :root {
+      font-size: 12px;
+      --font-scale: 1.067;
+    }
+
     * {
       -webkit-user-select: auto !important;
       -moz-user-select: auto !important;
@@ -60,15 +75,10 @@
     }
   }
 
-  @media screen {
-    .print-only {
-      display: none !important;
-    }
+  :root {
+    --text-secondary: rgba(0, 0, 0, 0.5);
   }
 
-  :root {
-    --font-scale: 1.125;
-  }
   h1 {
     font-size: calc(1rem * pow(var(--font-scale), 8));
   }

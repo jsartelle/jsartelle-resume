@@ -87,10 +87,12 @@
 .popoverBio {
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
 }
 
 .popoverBioImage {
   align-self: center;
+  border-radius: 50%;
 }
 
 .popoverBioName {

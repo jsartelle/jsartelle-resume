@@ -4,6 +4,7 @@ import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 import SkillCard from '@/app/components/SkillCard'
 
+import Photo from '@/public/photo.jpg'
 import HTML5Logo from '@/public/logos/HTML5.svg'
 import CSSLogo from '@/public/logos/CSS.svg'
 import SassLogo from '@/public/logos/Sass.svg'
@@ -21,7 +22,7 @@ import JestLogo from '@/public/logos/Jest.svg'
 
 /* TODO make this HTML and add hobbies and stuff */
 const bio =
-  "I'm a full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!"
+  "A full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!"
 
 const printBioContacts = (
   <ul className={styles.printBioContacts}>
@@ -435,10 +436,10 @@ export default function Home() {
         contentClassName={styles.popoverBio}
         title="About Me"
       >
-        {/* TODO photo here */}
         <Image
           className={styles.popoverBioImage}
-          src={JavaScriptLogo}
+          src={Photo}
+          alt='A photo of myself'
           height={75}
           width={75}
         ></Image>

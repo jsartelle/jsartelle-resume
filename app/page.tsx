@@ -100,16 +100,16 @@ const frameworksSection = (
 
 const experienceExtra = (
   <article>
-    <hgroup>
+    <hgroup className={styles.experienceHead}>
       <h4>
         <a target="_blank" href="https://extra.app/">
           Extra Card
         </a>
       </h4>
-      <p>Remote</p>
       <p>January 2022 - June 2024</p>
+      <p>Remote</p>
+      <strong>Senior Full Stack Engineer</strong>
     </hgroup>
-    <strong>Senior Full Stack Engineer</strong>
 
     <ul>
       <li>
@@ -160,16 +160,16 @@ const experienceExtra = (
 
 const experienceDigichief = (
   <article>
-    <hgroup>
+    <hgroup className={styles.experienceHead}>
       <h4>
         <a target="_blank" href="https://www.digichief.com/">
           Digichief
         </a>
       </h4>
-      <p>Remote</p>
       <p>May 2018 - March 2024</p>
+      <p>Remote</p>
+      <strong>Freelance Web Developer</strong>
     </hgroup>
-    <strong>Freelance Web Developer</strong>
 
     <ul>
       <li>
@@ -185,16 +185,16 @@ const experienceDigichief = (
 
 const experienceMood = (
   <article>
-    <hgroup>
+    <hgroup className={styles.experienceHead}>
       <h4>
         <a target="_blank" href="https://us.moodmedia.com/">
           Mood Media
         </a>
       </h4>
-      <p>Fort Mill, SC</p>
       <p>June 2016 - January 2022</p>
+      <p>Fort Mill, SC</p>
+      <strong>Senior Web Developer, Visuals</strong>
     </hgroup>
-    <strong>Senior Web Developer, Visuals</strong>
 
     <ul>
       <li>
@@ -224,16 +224,16 @@ const experienceMood = (
 
 const experienceSchwab = (
   <article>
-    <hgroup>
+    <hgroup className={styles.experienceHead}>
       <h4>
         <a target="_blank" href="https://www.schwab.com/">
           Charles Schwab
         </a>
       </h4>
-      <p>Charlotte, NC</p>
       <p>August 2015 - June 2016</p>
+      <p>Charlotte, NC</p>
+      <strong>Developer, Schwab Retirement Technologies</strong>
     </hgroup>
-    <strong>Developer, Schwab Retirement Technologies</strong>
 
     <ul>
       <li>
@@ -257,132 +257,137 @@ const experienceSchwab = (
 
 const experienceUNC = (
   <article>
-    <hgroup>
+    <hgroup className={styles.experienceHead}>
       <h4>The University of North Carolina at Charlotte</h4>
-      <p>Charlotte, NC</p>
       <p>May 2015</p>
-    </hgroup>
-
-    <div>
+      <p>Charlotte, NC</p>
       <strong>Bachelor of Science, Cum Laude, Computer Science</strong>
-      <span>GPA: 3.689 / 4.0</span>
-    </div>
+      <p>GPA: 3.689 / 4.0</p>
+    </hgroup>
   </article>
 )
 
 const credits = (
   <>
-    <h3>Knowledge</h3>
-    <ul>
-      <li>
-        CSS Reset:{' '}
-        <a href="https://www.joshwcomeau.com/css/custom-css-reset/">
-          https://www.joshwcomeau.com/css/custom-css-reset/
-        </a>
-      </li>
-      <li>
-        Font size scale:{' '}
-        <a href="https://notadesigner.io/p/typographic-scales">
-          https://notadesigner.io/p/typographic-scales
-        </a>
-      </li>
-    </ul>
+    <section>
+      <h3>Knowledge</h3>
+      <ul>
+        <li>
+          CSS Reset:{' '}
+          <a href="https://www.joshwcomeau.com/css/custom-css-reset/">
+            https://www.joshwcomeau.com/css/custom-css-reset/
+          </a>
+        </li>
+        <li>
+          Font size scale:{' '}
+          <a href="https://notadesigner.io/p/typographic-scales">
+            https://notadesigner.io/p/typographic-scales
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <h3>Resources</h3>
-    <ul>
-      <li>
-        Lunasima font:{' '}
-        <a href="https://fonts.google.com/specimen/Lunasima">
-          https://fonts.google.com/specimen/Lunasima
-        </a>
-      </li>
-      <li>
-        Tiger wallpaper:{' '}
-        <a href="https://512pixels.net/projects/default-mac-wallpapers-in-5k/">
-          https://512pixels.net/projects/default-mac-wallpapers-in-5k/
-        </a>
-      </li>
-    </ul>
+    <section>
+      <h3>Resources</h3>
+      <ul>
+        <li>
+          Lunasima font:{' '}
+          <a href="https://fonts.google.com/specimen/Lunasima">
+            https://fonts.google.com/specimen/Lunasima
+          </a>
+        </li>
+        <li>
+          Tiger wallpaper:{' '}
+          <a href="https://512pixels.net/projects/default-mac-wallpapers-in-5k/">
+            https://512pixels.net/projects/default-mac-wallpapers-in-5k/
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <h4>Logos</h4>
-    <ul>
-      <li>
-        HTML5: W3C, CC BY 3.0{' '}
-        <a href="https://creativecommons.org/licenses/by/3.0">
-          https://creativecommons.org/licenses/by/3.0
-        </a>
-        , via Wikimedia Commons
-      </li>
-      <li>
-        CSS: Rudloff, CC BY 3.0{' '}
-        <a href="https://creativecommons.org/licenses/by/3.0">
-          https://creativecommons.org/licenses/by/3.0
-        </a>
-        , via Wikimedia Commons
-      </li>
-      <li>
-        Sass: <a href="http://sass-lang.com/">http://sass-lang.com/</a>, Public
-        domain, via Wikimedia Commons
-      </li>
-      <li>
-        JavaScript: Christopher Williams, Public domain, via Wikimedia Commons
-      </li>
-      <li>TypeScript: TypeScript, Public domain, via Wikimedia Commons</li>
-      <li>
-        Shell (Bash): Free Software Foundation, FAL, via Wikimedia Commons
-      </li>
-      <li>Swift: The Swift logo is a trademark of Apple Inc.</li>
-      <li>React: Meta Platforms, Public domain, via Wikimedia Commons</li>
-      <li>React Native: Facebook, Public domain, via Wikimedia Commons</li>
-      <li>
-        Vue: Evan You,{' '}
-        <a href="https://github.com/yyx990803">https://github.com/yyx990803</a>,
-        CC BY 4.0{' '}
-        <a href="https://creativecommons.org/licenses/by/4.0">
-          https://creativecommons.org/licenses/by/4.0
-        </a>
-        , via Wikimedia Commons
-      </li>
-      <li>
-        Svelte:{' '}
-        <a href="https://github.com/sveltejs/svelte/graphs/contributors">
-          these people
-        </a>
-        , MIT{' '}
-        <a href="http://opensource.org/licenses/mit-license.php">
-          http://opensource.org/licenses/mit-license.php
-        </a>
-        , via Wikimedia Commons
-      </li>
-      <li>
-        Tailwind: Tailwind CSS, CC BY-SA 4.0{' '}
-        <a href="https://creativecommons.org/licenses/by-sa/4.0">
-          https://creativecommons.org/licenses/by-sa/4.0
-        </a>
-        , via Wikimedia Commons
-      </li>
-      <li>Jest: Copyright OpenJS Foundation and Jest contributors.</li>
-      <li>SQL:</li>
-    </ul>
-    <p>
-      Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as
-      part of Feather (MIT). All other copyright (c) for Lucide are held by
-      Lucide Contributors 2022.
-    </p>
-    <p>
-      Permission to use, copy, modify, and/or distribute this software for any
-      purpose with or without fee is hereby granted, provided that the above
-      copyright notice and this permission notice appear in all copies.
-    </p>
-    <p>
-      THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL
-      WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
-      OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-      ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-      WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-      ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
-      IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-    </p>
+    <section>
+      <h4>Logos</h4>
+      <ul>
+        <li>
+          HTML5: W3C, CC BY 3.0{' '}
+          <a href="https://creativecommons.org/licenses/by/3.0">
+            https://creativecommons.org/licenses/by/3.0
+          </a>
+          , via Wikimedia Commons
+        </li>
+        <li>
+          CSS: Rudloff, CC BY 3.0{' '}
+          <a href="https://creativecommons.org/licenses/by/3.0">
+            https://creativecommons.org/licenses/by/3.0
+          </a>
+          , via Wikimedia Commons
+        </li>
+        <li>
+          Sass: <a href="http://sass-lang.com/">http://sass-lang.com/</a>,
+          Public domain, via Wikimedia Commons
+        </li>
+        <li>
+          JavaScript: Christopher Williams, Public domain, via Wikimedia Commons
+        </li>
+        <li>TypeScript: TypeScript, Public domain, via Wikimedia Commons</li>
+        <li>
+          Shell (Bash): Free Software Foundation, FAL, via Wikimedia Commons
+        </li>
+        <li>Swift: The Swift logo is a trademark of Apple Inc.</li>
+        <li>React: Meta Platforms, Public domain, via Wikimedia Commons</li>
+        <li>React Native: Facebook, Public domain, via Wikimedia Commons</li>
+        <li>
+          Vue: Evan You,{' '}
+          <a href="https://github.com/yyx990803">
+            https://github.com/yyx990803
+          </a>
+          , CC BY 4.0{' '}
+          <a href="https://creativecommons.org/licenses/by/4.0">
+            https://creativecommons.org/licenses/by/4.0
+          </a>
+          , via Wikimedia Commons
+        </li>
+        <li>
+          Svelte:{' '}
+          <a href="https://github.com/sveltejs/svelte/graphs/contributors">
+            these people
+          </a>
+          , MIT{' '}
+          <a href="http://opensource.org/licenses/mit-license.php">
+            http://opensource.org/licenses/mit-license.php
+          </a>
+          , via Wikimedia Commons
+        </li>
+        <li>
+          Tailwind: Tailwind CSS, CC BY-SA 4.0{' '}
+          <a href="https://creativecommons.org/licenses/by-sa/4.0">
+            https://creativecommons.org/licenses/by-sa/4.0
+          </a>
+          , via Wikimedia Commons
+        </li>
+        <li>Jest: Copyright OpenJS Foundation and Jest contributors.</li>
+        <li>SQL:</li>
+      </ul>
+      <p>
+        Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as
+        part of Feather (MIT). All other copyright (c) for Lucide are held by
+        Lucide Contributors 2022.
+      </p>
+      <p>
+        Permission to use, copy, modify, and/or distribute this software for any
+        purpose with or without fee is hereby granted, provided that the above
+        copyright notice and this permission notice appear in all copies.
+      </p>
+      <p>
+        THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL
+        WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
+        OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE
+        FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+        DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
+        IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
+        OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+      </p>
+    </section>
   </>
 )
 
@@ -400,13 +405,13 @@ export default function Home() {
           {printBioContacts}
         </ContentWindow>
 
-        <ContentWindow title="Skills">
+        <ContentWindow title="Skills" contentClassName={styles.resumeContent}>
           {languagesSection}
           {frameworksSection}
         </ContentWindow>
 
         {/* TODO page break? */}
-        <ContentWindow title="History">
+        <ContentWindow title="History" contentClassName={styles.resumeContent}>
           <section>
             <h3>Experience</h3>
             {experienceExtra}
@@ -453,6 +458,7 @@ export default function Home() {
         tag="article"
         id="siteCreditsPopover"
         className={styles.siteCreditsPopover}
+        contentClassName={styles.siteCredits}
         popover="auto"
         title="Site Credits"
       >

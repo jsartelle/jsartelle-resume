@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import Image from 'next/image'
+import { Phone, Mail, Github, Linkedin, Link } from 'lucide-react'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 import SkillCard from '@/app/components/SkillCard'
@@ -39,7 +40,6 @@ export default function Home() {
           {frameworksSection}
         </ContentWindow>
 
-        {/* TODO page break? */}
         <ContentWindow title="History" contentClassName={styles.resumeContent}>
           <section>
             <h3>Experience</h3>
@@ -104,26 +104,25 @@ const bio =
 const printBioContacts = (
   <ul className={styles.printBioContacts}>
     <li>
-      {/* TODO add icons instead of labels */}
-      Phone:{' '}
+      <Phone size={15} />
       <a target="_blank" href="tel:9806229704">
         980-622-9704
       </a>
     </li>
     <li>
-      Email:{' '}
+      <Mail size={15} />
       <a target="_blank" href="mailto:jamessartelle@me.com">
         jamessartelle@me.com
       </a>
     </li>
     <li>
-      GitHub:{' '}
+      <Github size={15} />
       <a target="_blank" href="https://github.com/jsartelle">
         jsartelle
       </a>
     </li>
     <li>
-      LinkedIn:{' '}
+      <Linkedin size={15} />
       <a target="_blank" href="https://www.linkedin.com/in/james-sartelle/">
         https://www.linkedin.com/in/james-sartelle/
       </a>
@@ -468,4 +467,3 @@ const credits = (
     </section>
   </>
 )
-

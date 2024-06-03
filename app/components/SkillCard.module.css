@@ -9,6 +9,7 @@
   grid-template: auto auto / 50px auto;
 
   @media print {
+    padding: 0.5rem;
     grid-template: auto / 25px auto;
     row-gap: 0;
   }

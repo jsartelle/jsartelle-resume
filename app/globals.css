@@ -59,8 +59,8 @@
 
   @media print {
     :root {
+      --font-scale: 1.125;
       font-size: 12px;
-      --font-scale: 1.067;
     }
 
     * {

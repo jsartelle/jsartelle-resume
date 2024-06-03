@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren, ReactElement, ReactNode } from 'react'
 import styles from './ContentWindow.module.css'
 
 export interface ContentWindowProps extends PropsWithChildren {
@@ -6,6 +6,7 @@ export interface ContentWindowProps extends PropsWithChildren {
   id?: string
   className?: string
   popover?: 'auto' | 'manual'
+  titleIcon?: ReactNode
   title: string
   contentClassName?: string
 }
@@ -15,6 +16,7 @@ export default function ContentWindow({
   id,
   className,
   popover,
+  titleIcon,
   title,
   contentClassName,
   children,
@@ -27,7 +29,8 @@ export default function ContentWindow({
       className={[styles.window, className].join(' ')}
       popover={popover}
     >
-      <header>
+      <header className={styles.titlebar}>
+        {titleIcon}
         <h2>{title}</h2>
       </header>
       <div className={[styles.content, contentClassName].join(' ')}>

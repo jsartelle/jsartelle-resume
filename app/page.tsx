@@ -1,6 +1,14 @@
 import styles from './page.module.css'
 import Image from 'next/image'
-import { Phone, Mail, Github, Linkedin, Link } from 'lucide-react'
+import {
+  UserRound,
+  Phone,
+  Mail,
+  Github,
+  Linkedin,
+  BookText,
+  Briefcase,
+} from 'lucide-react'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 import SkillCard from '@/app/components/SkillCard'
@@ -28,19 +36,31 @@ export default function Home() {
 
       <main className={styles.desktop}>
         {/* print only bio */}
-        <ContentWindow className="print-only" title="About Me">
+        <ContentWindow
+          className="print-only"
+          title="About Me"
+          titleIcon={<UserRound size={18} />}
+        >
           {bio}
           <br />
           <br />
           {printBioContacts}
         </ContentWindow>
 
-        <ContentWindow title="Skills" contentClassName={styles.resumeContent}>
+        <ContentWindow
+          title="Skills"
+          titleIcon={<BookText size={18} />}
+          contentClassName={styles.resumeContent}
+        >
           {languagesSection}
           {frameworksSection}
         </ContentWindow>
 
-        <ContentWindow title="History" contentClassName={styles.resumeContent}>
+        <ContentWindow
+          title="History"
+          titleIcon={<Briefcase size={18} />}
+          contentClassName={styles.resumeContent}
+        >
           <section>
             <h3>Experience</h3>
             {experienceExtra}

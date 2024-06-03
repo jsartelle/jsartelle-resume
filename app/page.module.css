@@ -16,7 +16,8 @@
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
 
-  @media screen and (width >= 1000px) {
+  /* FIXME this is causing the titlebars to be slightly different sizes, probably because of border-box stuff */
+  /* @media screen and (width >= 1000px) {
     --offset: 2rem;
 
     & > * {
@@ -31,7 +32,7 @@
       -webkit-margin-before: var(--offset);
       margin-block-start: var(--offset);
     }
-  }
+  } */
 
   @media print, not (width >= 1000px) {
     overflow-y: scroll;

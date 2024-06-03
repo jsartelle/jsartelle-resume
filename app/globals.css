@@ -60,7 +60,7 @@
     }
   }
 
-  @media not print {
+  @media screen {
     .print-only {
       display: none !important;
     }

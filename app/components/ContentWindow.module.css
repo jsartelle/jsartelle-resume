@@ -11,12 +11,12 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    @media not print {
+    @media screen {
       height: 1.5rem;
     }
 
     & > h2 {
-      @media not print {
+      @media screen {
         font-size: inherit;
       }
     }

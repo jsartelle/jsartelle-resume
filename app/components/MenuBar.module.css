@@ -8,7 +8,7 @@
   padding-inline: 0.5rem;
 
   & > :where(h1) {
-    @media not print {
+    @media screen {
       font-size: inherit;
       padding-inline: 0.5rem;
     }

@@ -463,18 +463,21 @@ const credits = (
           , via Wikimedia Commons
         </li>
         <li>Jest: Copyright OpenJS Foundation and Jest contributors.</li>
-        <li>SQL:</li>
+        <li>SQL (Lucide):</li>
       </ul>
+      <br />
       <p>
         Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as
         part of Feather (MIT). All other copyright (c) for Lucide are held by
         Lucide Contributors 2022.
       </p>
+      <br />
       <p>
         Permission to use, copy, modify, and/or distribute this software for any
         purpose with or without fee is hereby granted, provided that the above
         copyright notice and this permission notice appear in all copies.
       </p>
+      <br />
       <p>
         THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL
         WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES

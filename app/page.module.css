@@ -82,7 +82,7 @@
 .experienceHead {
   display: grid;
   grid-template-columns: auto auto;
-  margin-block: 1rem;
+  margin-block-end: 1rem;
 
   & > :first-child {
     grid-column-start: span 2;

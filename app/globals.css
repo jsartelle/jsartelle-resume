@@ -80,6 +80,10 @@
     --text-secondary: rgba(0, 0, 0, 0.5);
   }
 
+  body {
+    font-family: 'Lucida Grande', var(--font-Lunasima), sans-serif;
+  }
+
   h1 {
     font-size: calc(1rem * pow(var(--font-scale), 8));
   }

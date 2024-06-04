@@ -4,7 +4,11 @@ import TigerBG from '@/public/10-4.webp'
 import { Lunasima } from 'next/font/google'
 import './globals.css'
 
-const font = Lunasima({ subsets: ['latin'], weight: ['400', '700'] })
+const font = Lunasima({
+  subsets: ['latin'],
+  variable: '--font-Lunasima',
+  weight: ['400', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'James Sartelle',
@@ -21,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={font.variable}>
         <Image
           className="print-hidden"
           alt=""

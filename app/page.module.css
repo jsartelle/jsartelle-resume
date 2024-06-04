@@ -82,6 +82,7 @@
 .experienceHead {
   display: grid;
   grid-template-columns: auto auto;
+  -webkit-margin-after: 1rem;
   margin-block-end: 1rem;
 
   & > :first-child {
@@ -98,30 +99,34 @@
   }
 }
 
-.popoverBio {
+.popoverAbout {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
 
-.popoverBioImage {
+.popoverAboutImage {
   align-self: center;
   border-radius: 50%;
 }
 
-.popoverBioName {
+.popoverAboutName {
   text-align: center;
-  font-size: calc(1rem * pow(var(--font-scale), 4));
+  font-size: calc(1rem * pow(var(--font-scale), 5));
 }
 
-.popoverBioText {
+.popoverAboutBio {
   text-align: center;
   text-wrap: pretty;
 }
 
-.popoverBioFooter {
+.popoverAboutFooter {
   color: var(--text-secondary);
   text-align: center;
+}
+
+.siteCreditsButton {
+  align-self: center;
 }
 
 .siteCreditsPopover {

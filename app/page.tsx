@@ -81,23 +81,28 @@ export default function Home() {
         id="aboutWindowPopover"
         className="print-hidden"
         popover="auto"
-        contentClassName={styles.popoverBio}
+        contentClassName={styles.popoverAbout}
         title="About Me"
       >
         <Image
-          className={styles.popoverBioImage}
+          className={styles.popoverAboutImage}
           src={Photo}
           alt="A photo of myself"
           height={75}
           width={75}
         ></Image>
 
-        <div className={styles.popoverBioName}>James Sartelle</div>
-        <p className={styles.popoverBioText}>{bio}</p>
+        <div className={styles.popoverAboutName}>James Sartelle</div>
+        <p className={styles.popoverAboutBio}>{bio}</p>
 
-        <button popoverTarget="siteCreditsPopover">Site Credits...</button>
+        <button
+          className={['aqua-button', styles.siteCreditsButton].join(' ')}
+          popoverTarget="siteCreditsPopover"
+        >
+          Site Credits...
+        </button>
 
-        <footer className={styles.popoverBioFooter}>
+        <footer className={styles.popoverAboutFooter}>
           <div>©️ 2024 James Sartelle</div>
           <div>All Rights Reserved.</div>
         </footer>

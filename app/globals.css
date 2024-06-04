@@ -116,6 +116,10 @@
     background: var(--bg), var(--border-bg);
     background-clip: padding-box, border-box;
     box-shadow: var(--box-shadow);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     padding-inline: 14px;
 
     &:focus-visible {

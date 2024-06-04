@@ -8,6 +8,7 @@
   background-color: white;
   box-shadow: var(--window-box-shadow);
 
+  /* TODO popover shouldn't draw above menubar */
   &[popover] {
     margin: auto;
     padding: 0;
@@ -20,6 +21,7 @@
   }
 }
 
+/* TODO would be fun to have window focus states */
 .titlebar {
   position: relative;
   display: flex;

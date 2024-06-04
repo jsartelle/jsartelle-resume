@@ -78,6 +78,15 @@
   :root {
     --focus-box-shadow: 0 0 3px 2px #92b9db;
     --text-secondary: rgba(0, 0, 0, 0.5);
+    accent-color: #3471cf;
+  }
+
+  ::-moz-selection {
+    background-color: #b5d5ff;
+  }
+
+  ::selection {
+    background-color: #b5d5ff;
   }
 
   body {

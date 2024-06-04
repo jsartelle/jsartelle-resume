@@ -114,6 +114,11 @@
   font-size: calc(1rem * pow(var(--font-scale), 4));
 }
 
+.popoverBioText {
+  text-align: center;
+  text-wrap: pretty;
+}
+
 .popoverBioFooter {
   color: var(--text-secondary);
   text-align: center;

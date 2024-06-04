@@ -93,7 +93,7 @@ export default function Home() {
         ></Image>
 
         <div className={styles.popoverBioName}>James Sartelle</div>
-        {bio}
+        <p className={styles.popoverBioText}>{bio}</p>
 
         <button popoverTarget="siteCreditsPopover">Site Credits...</button>
 

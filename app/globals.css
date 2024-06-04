@@ -76,9 +76,8 @@
   }
 
   :root {
+    --focus-box-shadow: 0 0 3px 2px #92b9db;
     --text-secondary: rgba(0, 0, 0, 0.5);
-    --window-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-    --button-focus-box-shadow: 0 0 3px 2px #92b9db;
   }
 
   h1 {
@@ -98,5 +97,42 @@
   }
   h6 {
     font-size: calc(1rem * pow(var(--font-scale), 3));
+  }
+
+  button.aqua-button {
+    --bg: linear-gradient(
+      to bottom,
+      #f9f9f9,
+      #ededed 40%,
+      #dadada 40%,
+      #ffffff
+    );
+    --border-bg: linear-gradient(to bottom, #8b8b8b, #505050);
+    --box-shadow: 0 2px 3px -1px #aeaeae;
+    min-width: 91px;
+    height: 28px;
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    background: var(--bg), var(--border-bg);
+    background-clip: padding-box, border-box;
+    box-shadow: var(--box-shadow);
+    padding-inline: 14px;
+
+    &:focus-visible {
+      --border-bg: linear-gradient(#6f89a0, #6f89a0);
+      --box-shadow: var(--focus-box-shadow);
+      outline: none;
+    }
+
+    &:active {
+      --bg: linear-gradient(
+        to bottom,
+        #c8d5ed,
+        #97c2ee 40%,
+        #6eadee 40%,
+        #aff9ff
+      );
+      --border-bg: linear-gradient(to bottom, #272798, #616161);
+    }
   }
 }

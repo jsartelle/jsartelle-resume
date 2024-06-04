@@ -6,7 +6,7 @@
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: white;
-  box-shadow: var(--window-box-shadow);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
 
   /* TODO popover shouldn't draw above menubar */
   &[popover] {
@@ -95,7 +95,7 @@
 
   &:focus-visible:not(:active) {
     outline: none;
-    box-shadow: var(--inset-shadow), var(--button-focus-box-shadow);
+    box-shadow: var(--inset-shadow), var(--focus-box-shadow);
   }
 
   &:enabled:active {

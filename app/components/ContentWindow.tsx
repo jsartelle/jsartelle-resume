@@ -2,7 +2,7 @@ import type { PropsWithChildren, ReactElement, ReactNode } from 'react'
 import styles from './ContentWindow.module.css'
 
 export interface ContentWindowProps extends PropsWithChildren {
-  tag?: keyof JSX.IntrinsicElements
+  Tag?: keyof JSX.IntrinsicElements
   id?: string
   className?: string
   popover?: 'auto' | 'manual'
@@ -12,7 +12,7 @@ export interface ContentWindowProps extends PropsWithChildren {
 }
 
 export default function ContentWindow({
-  tag = 'div',
+  Tag = 'div',
   id,
   className,
   popover,
@@ -21,8 +21,6 @@ export default function ContentWindow({
   contentClassName,
   children,
 }: ContentWindowProps) {
-  const Tag = tag
-
   return (
     <Tag
       id={id}

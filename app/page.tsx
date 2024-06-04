@@ -77,7 +77,7 @@ export default function Home() {
       </main>
 
       <ContentWindow
-        tag="article"
+        Tag="article"
         id="aboutWindowPopover"
         className="print-hidden"
         popover="auto"
@@ -104,7 +104,7 @@ export default function Home() {
       </ContentWindow>
 
       <ContentWindow
-        tag="article"
+        Tag="article"
         id="siteCreditsPopover"
         className={styles.siteCreditsPopover}
         contentClassName={styles.siteCredits}

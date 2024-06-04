@@ -78,7 +78,7 @@
   :root {
     --text-secondary: rgba(0, 0, 0, 0.5);
     --window-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-    --widget-box-shadow: 0 0 3px 2px #92b9db;
+    --button-focus-box-shadow: 0 0 3px 2px #92b9db;
   }
 
   h1 {

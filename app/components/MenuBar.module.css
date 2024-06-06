@@ -1,6 +1,7 @@
 .menubar {
   --menu-button-bg: linear-gradient(135deg, #3dadff, #1666ee);
   --menu-item-active-bg: linear-gradient(to bottom, #237ee9, #015cd8);
+  --menu-option-active-bg: #336fcb;
   --menu-item-padding: 10px;
   z-index: 10000;
   display: flex;
@@ -38,10 +39,6 @@
     outline: none;
     background: var(--menu-item-active-bg);
     color: white;
-
-    & svg {
-      fill: white;
-    }
   }
 }
 
@@ -53,6 +50,10 @@
 
   @media (width < 410px) {
     display: none;
+  }
+
+  &:is(:active, :focus-visible) > svg {
+    fill: white;
   }
 }
 
@@ -122,7 +123,7 @@
     &:hover,
     &:focus-within {
       outline: none;
-      background: #336fcb;
+      background: var(--menu-option-active-bg);
       color: white;
     }
 
@@ -130,12 +131,4 @@
       all: unset;
     }
   }
-}
-
-.printButton {
-  border-radius: 50%;
-  background: var(--menu-button-bg);
-  color: white;
-  -webkit-margin-start: auto;
-  margin-inline-start: auto;
 }

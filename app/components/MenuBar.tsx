@@ -1,5 +1,6 @@
 import styles from './MenuBar.module.css'
-import { UserRound, Printer } from 'lucide-react'
+import { UserRound } from 'lucide-react'
+import PrintButton from '@/app/components/PrintButton'
 
 export default function MenuBar() {
   return (
@@ -79,13 +80,7 @@ export default function MenuBar() {
         </menu>
       </details>
 
-      {/* TODO make this a functional Print button */}
-      <button
-        className={[styles.printButton, 'print-hidden'].join(' ')}
-        aria-label="Print"
-      >
-        <Printer />
-      </button>
+      <PrintButton />
     </header>
   )
 }

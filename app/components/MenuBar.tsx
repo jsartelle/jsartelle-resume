@@ -4,7 +4,11 @@ import { UserRound, Printer } from 'lucide-react'
 export default function MenuBar() {
   return (
     <header className={styles.menubar}>
-      <div className={[styles.profileIcon, 'print-hidden'].join(' ')}>
+      <div
+        className={[styles.menuItem, styles.profileIcon, 'print-hidden'].join(
+          ' '
+        )}
+      >
         <UserRound
           id="lucideUserRound"
           fill="url(#menuButtonBgGradient)"
@@ -28,18 +32,27 @@ export default function MenuBar() {
         </UserRound>
       </div>
 
-      <h1 className={styles.name}>James Sartelle</h1>
+      <h1 className={[styles.menuItem, styles.name].join(' ')}>
+        James Sartelle
+      </h1>
 
       <button
         popoverTarget="aboutWindowPopover"
-        className={[styles.aboutButton, 'print-hidden'].join(' ')}
+        className={[styles.menuItem, styles.aboutButton, 'print-hidden'].join(
+          ' '
+        )}
       >
         About
       </button>
 
-      <details name="menubar" className="print-hidden">
-        <summary>Contact</summary>
-        <menu>
+      <details
+        name="menubar"
+        className={[styles.menuWrapper, 'print-hidden'].join(' ')}
+      >
+        <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
+          Contact
+        </summary>
+        <menu className={styles.menu}>
           <li>
             <a target="_blank" href="tel:9806229704">
               Dial 980-622-9704...

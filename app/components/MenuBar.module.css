@@ -4,7 +4,6 @@
   --menu-item-padding: 10px;
   z-index: 10000;
   display: flex;
-  height: 30px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #bcbcbc;
   border-top-left-radius: 9px;
@@ -22,93 +21,26 @@
   user-select: none;
   padding-inline: 20px;
 
-  /* FIXME fix print styles */
-
-  /* FIXME use classes, consolidate common styles like active BG */
-  & > :where(h1) {
-    @media screen {
-      display: flex;
-      align-items: center;
-      font-size: inherit;
-      padding-inline: var(--menu-item-padding);
-    }
-    @media print {
-      flex-grow: 1;
-      text-align: center;
-      padding-inline: 1rem;
-    }
+  @media screen {
+    height: 30px;
   }
+}
 
-  & > :where(button) {
-    border: none;
-    background: none;
-    padding-block: 0;
-    padding-inline: var(--menu-item-padding);
+.menuItem {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-inline: var(--menu-item-padding);
 
-    &:active,
-    &:focus-visible {
-      outline: none;
-      background: var(--menu-item-active-bg);
-      color: white;
-    }
-  }
+  &:active,
+  &:focus-visible,
+  details[open] & {
+    outline: none;
+    background: var(--menu-item-active-bg);
+    color: white;
 
-  & > :where(details) {
-    cursor: default;
-
-    & > summary {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      list-style-type: none;
-      padding-inline: var(--menu-item-padding);
-
-      &:focus-visible,
-      &:active,
-      [open] & {
-        outline: none;
-        background: var(--menu-item-active-bg);
-        color: white;
-      }
-
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
-
-    & > menu {
-      position: absolute;
-      padding: 0;
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
-      list-style-type: none;
-      padding-block: 4px;
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: var(--pinstripe-bg);
-        content: '';
-        opacity: 0.95;
-      }
-
-      & > li {
-        padding-inline: 22px;
-
-        &:hover,
-        &:focus-within {
-          outline: none;
-          background: #336fcb;
-          color: white;
-        }
-
-        & > a {
-          all: unset;
-        }
-      }
+    & svg {
+      fill: white;
     }
   }
 }
@@ -120,9 +52,75 @@
   padding-inline-end: var(--menu-item-padding);
 }
 
-.menubar:has(~ :global(#aboutWindowPopover):popover-open) .aboutButton {
-  background: var(--menu-item-active-bg);
-  color: white;
+.name {
+  @media screen {
+    font-size: inherit;
+  }
+  @media print {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    padding-inline: 1rem;
+  }
+}
+
+.aboutButton {
+  border: none;
+  background: none;
+  padding-block: 0;
+
+  .menubar:has(~ :global(#aboutWindowPopover):popover-open) & {
+    background: var(--menu-item-active-bg);
+    color: white;
+  }
+}
+
+.contactButton {
+  list-style-type: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.menuWrapper {
+  cursor: default;
+}
+
+.menu {
+  position: absolute;
+  padding: 0;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+  list-style-type: none;
+  padding-block: 4px;
+
+  &::before {
+    /* background on separate layer to control opacity */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--pinstripe-bg);
+    content: '';
+    opacity: 0.95;
+  }
+
+  & > li {
+    padding-inline: 22px;
+
+    &:hover,
+    &:focus-within {
+      outline: none;
+      background: #336fcb;
+      color: white;
+    }
+
+    & > a {
+      all: unset;
+    }
+  }
 }
 
 .printButton {

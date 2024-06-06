@@ -8,6 +8,7 @@ import {
   Linkedin,
   BookText,
   Briefcase,
+  Database,
 } from 'lucide-react'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
@@ -19,7 +20,6 @@ import CSSLogo from '@/public/logos/CSS.svg'
 import SassLogo from '@/public/logos/Sass.svg'
 import JavaScriptLogo from '@/public/logos/JavaScript.svg'
 import TypeScriptLogo from '@/public/logos/TypeScript.svg'
-import DatabaseLogo from '@/public/logos/database.svg'
 import BashLogo from '@/public/logos/Bash.svg'
 import SwiftLogo from '@/public/logos/Swift.svg'
 import ReactLogo from '@/public/logos/React.svg'
@@ -164,7 +164,7 @@ const languagesSection = (
       <SkillCard logo={SassLogo} title="Sass" progress={5} />
       <SkillCard logo={JavaScriptLogo} title="JavaScript" progress={5} />
       <SkillCard logo={TypeScriptLogo} title="TypeScript" progress={5} />
-      <SkillCard logo={DatabaseLogo} title="MySQL" progress={3} />
+      <SkillCard LogoIcon={Database} title="MySQL" progress={3} />
       <SkillCard logo={BashLogo} title="Shell" progress={2} />
       <SkillCard logo={SwiftLogo} title="Swift" progress={2} />
     </div>
@@ -468,7 +468,7 @@ const credits = (
           , via Wikimedia Commons
         </li>
         <li>Jest: Copyright OpenJS Foundation and Jest contributors.</li>
-        <li>SQL (Lucide):</li>
+        <li>Lucide Icons:</li>
       </ul>
       <br />
       <p>

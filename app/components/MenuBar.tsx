@@ -5,12 +5,35 @@ export default function MenuBar() {
   return (
     <header className={styles.menubar}>
       <div className={[styles.profileIcon, 'print-hidden'].join(' ')}>
-        <UserRound />
+        <UserRound
+          id="lucideUserRound"
+          fill="url(#menuButtonBgGradient)"
+          stroke="none"
+        >
+          <svg
+            viewBox="0 0 10 10"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <linearGradient
+                id="menuButtonBgGradient"
+                gradientTransform="rotate(45)"
+              >
+                <stop offset="0%" stopColor="#3dadff" />
+                <stop offset="100%" stopColor="#1666ee" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </UserRound>
       </div>
 
       <h1 className={styles.name}>James Sartelle</h1>
 
-      <button popoverTarget="aboutWindowPopover" className={[styles.aboutButton, 'print-hidden'].join(' ')}>
+      <button
+        popoverTarget="aboutWindowPopover"
+        className={[styles.aboutButton, 'print-hidden'].join(' ')}
+      >
         About
       </button>
 

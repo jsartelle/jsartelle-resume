@@ -1,17 +1,36 @@
 .menubar {
+  --menu-button-bg: linear-gradient(135deg, #3dadff, #1666ee);
+  --menu-item-active-bg: linear-gradient(to bottom, #237ee9, #015cd8);
+  --menu-item-padding: 10px;
   z-index: 10000;
   display: flex;
-  background-color: white;
+  height: 30px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #bcbcbc;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f0f0f0 50%,
+    #e8e8e8 50%,
+    #ffffff
+  );
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding-inline: 0.5rem;
+  padding-inline: 20px;
 
+  /* FIXME fix print styles */
+
+  /* FIXME use classes, consolidate common styles like active BG */
   & > :where(h1) {
     @media screen {
+      display: flex;
+      align-items: center;
       font-size: inherit;
-      padding-inline: 0.5rem;
+      padding-inline: var(--menu-item-padding);
     }
     @media print {
       flex-grow: 1;
@@ -24,12 +43,13 @@
     border: none;
     background: none;
     padding-block: 0;
-    padding-inline: 0.5rem;
+    padding-inline: var(--menu-item-padding);
 
     &:active,
     &:focus-visible {
       outline: none;
-      background: deepskyblue;
+      background: var(--menu-item-active-bg);
+      color: white;
     }
   }
 
@@ -37,12 +57,18 @@
     cursor: default;
 
     & > summary {
+      display: flex;
+      align-items: center;
+      height: 100%;
       list-style-type: none;
-      padding-inline: 0.5rem;
+      padding-inline: var(--menu-item-padding);
 
-      &:focus-visible {
+      &:focus-visible,
+      &:active,
+      [open] & {
         outline: none;
-        background: deepskyblue;
+        background: var(--menu-item-active-bg);
+        color: white;
       }
 
       &::-webkit-details-marker {
@@ -50,23 +76,33 @@
       }
     }
 
-    &[open] {
-      background: deepskyblue;
-    }
-
     & > menu {
       position: absolute;
       padding: 0;
-      background: white;
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
       list-style-type: none;
+      padding-block: 4px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: var(--pinstripe-bg);
+        content: '';
+        opacity: 0.95;
+      }
 
       & > li {
-        padding-inline: 0.5rem;
+        padding-inline: 22px;
 
         &:hover,
         &:focus-within {
           outline: none;
-          background: deepskyblue;
+          background: #336fcb;
+          color: white;
         }
 
         & > a {
@@ -78,17 +114,20 @@
 }
 
 .profileIcon {
-  -webkit-padding-end: 0.5rem;
-  padding-inline-end: 0.5rem;
+  display: flex;
+  align-items: center;
+  -webkit-padding-end: var(--menu-item-padding);
+  padding-inline-end: var(--menu-item-padding);
 }
 
 .menubar:has(~ :global(#aboutWindowPopover):popover-open) .aboutButton {
-  background: deepskyblue;
+  background: var(--menu-item-active-bg);
+  color: white;
 }
 
 .printButton {
   border-radius: 50%;
-  background: deepskyblue;
+  background: var(--menu-button-bg);
   color: white;
   -webkit-margin-start: auto;
   margin-inline-start: auto;

@@ -77,6 +77,13 @@
 
   :root {
     --focus-box-shadow: 0 0 3px 2px #92b9db;
+    --pinstripe-bg: repeating-linear-gradient(
+      to bottom,
+      #ebecec,
+      #ebecec 2px,
+      #eff0f0 2px,
+      #eff0f0 4px
+    );
     --text-secondary: rgba(0, 0, 0, 0.5);
     accent-color: #3471cf;
   }

@@ -144,11 +144,5 @@
   flex-grow: 1;
   overflow: scroll;
   padding: 1rem;
-  background: repeating-linear-gradient(
-    to bottom,
-    #ebecec,
-    #ebecec 2px,
-    #eff0f0 2px,
-    #eff0f0 4px
-  );
+  background: var(--pinstripe-bg);
 }

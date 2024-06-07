@@ -7,7 +7,7 @@
   padding-inline: var(--menu-item-padding);
   -webkit-margin-start: auto;
   margin-inline-start: auto;
-  padding-block: 1px;
+  padding-block: 2px;
 
   &:active,
   &:focus-visible {
@@ -27,8 +27,8 @@
   color: white;
   aspect-ratio: 1 / 1;
 
-  &:active,
-  &:focus-visible {
+  .printButton:active &,
+  .printButton:focus-visible & {
     background: white;
 
     & > svg {

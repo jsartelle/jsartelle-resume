@@ -85,6 +85,7 @@
       #eff0f0 4px
     );
     --text-secondary: rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
     accent-color: #3471cf;
   }
 
@@ -122,22 +123,22 @@
     color: inherit;
   }
   button.aqua-button {
-    --bg: linear-gradient(
+    --button-bg: linear-gradient(
       to bottom,
       #f9f9f9,
       #ededed 40%,
       #dadada 40%,
       #ffffff
     );
-    --border-bg: linear-gradient(to bottom, #8b8b8b, #505050);
-    --box-shadow: 0 2px 3px -1px #aeaeae;
+    --button-border-bg: linear-gradient(to bottom, #8b8b8b, #505050);
+    --button-box-shadow: 0 2px 3px -1px #8b8b8b;
     min-width: 91px;
     height: 28px;
     border: 1px solid transparent;
     border-radius: 9999px;
-    background: var(--bg), var(--border-bg);
+    background: var(--button-bg), var(--button-border-bg);
     background-clip: padding-box, border-box;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--button-box-shadow);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -145,20 +146,20 @@
     padding-inline: 14px;
 
     &:focus-visible {
-      --border-bg: linear-gradient(#6f89a0, #6f89a0);
-      --box-shadow: var(--focus-box-shadow);
+      --button-border-bg: linear-gradient(#6f89a0, #6f89a0);
+      --button-box-shadow: var(--focus-box-shadow);
       outline: none;
     }
 
     &:active {
-      --bg: linear-gradient(
+      --button-bg: linear-gradient(
         to bottom,
         #c8d5ed,
         #97c2ee 40%,
         #6eadee 40%,
         #aff9ff
       );
-      --border-bg: linear-gradient(to bottom, #272798, #616161);
+      --button-border-bg: linear-gradient(to bottom, #272798, #616161);
     }
   }
 }

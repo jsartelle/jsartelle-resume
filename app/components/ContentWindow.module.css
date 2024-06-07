@@ -6,7 +6,7 @@
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: white;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow);
 
   /* TODO popover shouldn't draw above menubar */
   &[popover] {

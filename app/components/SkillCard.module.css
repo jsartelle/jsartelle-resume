@@ -83,7 +83,8 @@
     );
   background-size: var(--height) var(--height);
   @media not (prefers-reduced-motion: reduce) {
-    animation: 0.33s linear infinite progressBarScroll;
+    /* actual speed is closer to 0.33s but this looks better */
+    animation: 1s linear infinite progressBarScroll;
   }
 }
 

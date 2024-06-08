@@ -100,6 +100,12 @@
     right: 0;
   }
 
+  @media not (prefers-reduced-transparency: reduce) {
+    &::before {
+      opacity: 0.95;
+    }
+  }
+
   &::before {
     /* background on separate layer to control opacity */
     position: absolute;
@@ -109,7 +115,6 @@
     height: 100%;
     background: var(--pinstripe-bg);
     content: '';
-    opacity: 0.95;
   }
 
   & > li {

@@ -39,11 +39,14 @@ export default function SkillCard({
         <h4>{title}</h4>
         {secondary ? <p className={styles.secondary}>{secondary}</p> : null}
       </hgroup>
-      <progress
+      {/* <progress> elements are extremely difficult to style across browsers, and animation support is limited */}
+      <div
         className={[styles.progress, 'print-hidden'].join(' ')}
-        value={progress}
-        max="5"
-      ></progress>
+        role='progressbar'
+        style={{'--value-width': `${progress / 5 * 100}%`} as React.CSSProperties}
+      >
+        <div className={styles.progressValue}></div>
+      </div>
     </article>
   )
 }

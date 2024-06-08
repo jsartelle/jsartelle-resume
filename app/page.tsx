@@ -224,8 +224,9 @@ const experienceExtra = (
       </li>
       <li>
         Made significant contributions to Extra&apos;s API, built on{' '}
-        <strong>Node</strong> and <strong>Express</strong> using TypeScript.
-        Wrote unit tests using <strong>Jest</strong>.
+        <strong>Node</strong> and <strong>Express</strong> using TypeScript and{' '}
+        <strong>Objection ORM</strong>. Wrote unit tests using{' '}
+        <strong>Jest</strong>.
       </li>
       <li>
         Implemented new screens in Extra&apos;s iOS and Android app, built with{' '}

@@ -16,9 +16,6 @@
     #e8e8e8 50%,
     #ffffff
   );
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   padding-inline: 20px;
 
@@ -45,7 +42,6 @@
 .profileIcon {
   display: flex;
   align-items: center;
-  -webkit-padding-end: var(--menu-item-padding);
   padding-inline-end: var(--menu-item-padding);
 
   @media (width < 410px) {
@@ -95,7 +91,7 @@
 .menu {
   position: absolute;
   padding: 0;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--panel-box-shadow);
   list-style-type: none;
   padding-block: 4px;
 

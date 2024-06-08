@@ -5,7 +5,6 @@
   border: none;
   background: none;
   padding-inline: var(--menu-item-padding);
-  -webkit-margin-start: auto;
   margin-inline-start: auto;
   padding-block: 2px;
 

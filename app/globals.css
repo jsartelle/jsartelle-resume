@@ -64,9 +64,6 @@
     }
 
     * {
-      -webkit-user-select: auto !important;
-      -moz-user-select: auto !important;
-      -ms-user-select: auto !important;
       user-select: auto !important;
     }
 
@@ -84,13 +81,10 @@
       #eff0f0 2px,
       #eff0f0 4px
     );
+    --panel-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
     --text-secondary: rgba(0, 0, 0, 0.5);
-    --box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    --widget-box-shadow: 0 2px 3px -1px #8b8b8b;
     accent-color: #3471cf;
-  }
-
-  ::-moz-selection {
-    background-color: #b5d5ff;
   }
 
   ::selection {
@@ -122,6 +116,7 @@
   button {
     color: inherit;
   }
+  /* TODO make this a component */
   button.aqua-button {
     --button-bg: linear-gradient(
       to bottom,
@@ -131,24 +126,20 @@
       #ffffff
     );
     --button-border-bg: linear-gradient(to bottom, #8b8b8b, #505050);
-    --button-box-shadow: 0 2px 3px -1px #8b8b8b;
     min-width: 91px;
     height: 28px;
     border: 1px solid transparent;
     border-radius: 9999px;
     background: var(--button-bg), var(--button-border-bg);
     background-clip: padding-box, border-box;
-    box-shadow: var(--button-box-shadow);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    box-shadow: var(--widget-box-shadow);
     user-select: none;
     padding-inline: 14px;
 
     &:focus-visible {
       --button-border-bg: linear-gradient(#6f89a0, #6f89a0);
-      --button-box-shadow: var(--focus-box-shadow);
       outline: none;
+      box-shadow: var(--focus-box-shadow);
     }
 
     &:active {

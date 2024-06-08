@@ -7,7 +7,10 @@
   border-top-right-radius: 9px;
   background-color: white;
   box-shadow: var(--panel-box-shadow);
-  /* FIXME lighter box shadow for print */
+
+  @media print {
+    box-shadow: var(--widget-box-shadow);
+  }
 
   /* TODO popover shouldn't draw above menubar */
   &[popover] {

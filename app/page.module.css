@@ -1,10 +1,16 @@
 .root {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 100dvw;
+  grid-template-rows: min-content auto;
   @media screen {
     height: 100dvh;
+    background-color: black;
   }
+}
+
+.wallpaper {
+  height: 100%;
+  grid-area: 2 / 1;
 }
 
 .desktop {
@@ -13,6 +19,7 @@
   align-items: start;
   overflow: hidden;
   padding: 1rem;
+  grid-area: 2 / 1;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
 

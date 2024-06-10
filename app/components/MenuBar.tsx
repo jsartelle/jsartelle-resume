@@ -37,14 +37,14 @@ export default function MenuBar() {
         James Sartelle
       </h1>
 
-      <button
+      {/* <button
         popoverTarget="aboutWindowPopover"
         className={[styles.menuItem, styles.aboutButton, 'print-hidden'].join(
           ' '
         )}
       >
         About
-      </button>
+      </button> */}
 
       <details
         name="menubar"
@@ -75,6 +75,22 @@ export default function MenuBar() {
               href="https://www.linkedin.com/in/james-sartelle/"
             >
               Open LinkedIn...
+            </a>
+          </li>
+        </menu>
+      </details>
+
+      <details
+        name="menubar"
+        className={[styles.menuWrapper, 'print-hidden'].join(' ')}
+      >
+        <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
+          More
+        </summary>
+        <menu className={styles.menu}>
+          <li>
+            <a target="_blank" href="https://jsartelle-dev-notes.vercel.app/">
+              Development Notes...
             </a>
           </li>
         </menu>

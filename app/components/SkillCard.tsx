@@ -44,6 +44,7 @@ export default function SkillCard({
         {secondary ? <p className={styles.secondary}>{secondary}</p> : null}
       </hgroup>
       {/* <progress> elements are extremely difficult to style across browsers, and animation support is limited */}
+      {/* FIXME pause animation when inactive */}
       <div
         className={[styles.progress, 'print-hidden'].join(' ')}
         role="progressbar"

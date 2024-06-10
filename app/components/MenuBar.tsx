@@ -38,7 +38,7 @@ export default function MenuBar() {
       </h1>
 
       {/* <button
-        popoverTarget="aboutWindowPopover"
+        popoverTarget=""
         className={[styles.menuItem, styles.aboutButton, 'print-hidden'].join(
           ' '
         )}

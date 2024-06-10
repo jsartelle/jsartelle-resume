@@ -16,7 +16,7 @@
   &[popover] {
     margin: auto;
     padding: 0;
-    max-height: 100dvh;
+    max-height: min(1000px, 100dvh);
     width: min(300px, 100vw);
 
     &:not(:popover-open) {
@@ -112,6 +112,7 @@
   }
 }
 
+/* TODO keep the hover styles on the static windows? */
 .titleButtonGlyph {
   visibility: hidden;
   color: black;

@@ -157,4 +157,8 @@
   & :is(h3, h4) {
     margin-block-end: 0.5rem;
   }
+
+  & :is(a) {
+    word-break: break-all;
+  }
 }

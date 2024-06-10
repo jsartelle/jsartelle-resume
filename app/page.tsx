@@ -51,7 +51,6 @@ export default function Home() {
         <div className={styles.column}>
           <ContentWindow
             Tag="article"
-            id="aboutWindowPopover"
             className={styles.bio}
             contentClassName={styles.about}
             title="About Me"

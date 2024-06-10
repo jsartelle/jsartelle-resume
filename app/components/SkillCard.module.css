@@ -10,16 +10,13 @@
   grid-template: auto auto / 50px auto;
 
   @media print {
-    padding: 0.5rem;
+    padding-block: 0.5rem;
     grid-template: auto / 25px auto;
-    row-gap: 0;
   }
 }
 
 .logo {
-  @media screen {
-    grid-row: span 2;
-  }
+  grid-row: span 2;
 
   @media print {
     width: 25px;
@@ -55,7 +52,14 @@
     #f8f8f8,
     #cecece
   );
-  box-shadow: var(--widget-box-shadow);
+
+  @media screen {
+    box-shadow: var(--widget-box-shadow);
+  }
+
+  @media print {
+    --height: 12px;
+  }
 }
 
 .progressValue {

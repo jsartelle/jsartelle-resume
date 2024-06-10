@@ -72,6 +72,10 @@
     }
   }
 
+  @page {
+    margin: 0;
+  }
+
   :root {
     --focus-box-shadow: 0 0 3px 2px #92b9db;
     --pinstripe-bg: repeating-linear-gradient(

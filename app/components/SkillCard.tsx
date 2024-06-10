@@ -46,7 +46,7 @@ export default function SkillCard({
       {/* <progress> elements are extremely difficult to style across browsers, and animation support is limited */}
       {/* FIXME pause animation when inactive */}
       <div
-        className={[styles.progress, 'print-hidden'].join(' ')}
+        className={styles.progress}
         role="progressbar"
         aria-labelledby={headerId}
         aria-valuemin={0}

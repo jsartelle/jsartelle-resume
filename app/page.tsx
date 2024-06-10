@@ -70,18 +70,16 @@ export default function Home() {
 
             {bioContacts}
 
-            {/* <button
-              className={['aqua-button', styles.siteCreditsButton].join(' ')}
+            <button
+              className={[
+                'aqua-button',
+                styles.siteCreditsButton,
+                'print-hidden',
+              ].join(' ')}
               popoverTarget="siteCreditsPopover"
             >
               Site Credits...
-            </button> */}
-
-            {/* FIXME move onto Site Credits page */}
-            {/* <footer className={styles.popoverAboutFooter}>
-          <div>©️ 2024 James Sartelle</div>
-          <div>All Rights Reserved.</div>
-        </footer> */}
+            </button>
           </ContentWindow>
 
           <ContentWindow
@@ -512,5 +510,10 @@ const credits = (
         OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       </p>
     </section>
+
+    <footer className={styles.popoverAboutFooter}>
+      <div>Site ©️ 2024 James Sartelle</div>
+      <div>All Rights Reserved.</div>
+    </footer>
   </>
 )

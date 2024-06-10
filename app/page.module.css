@@ -71,7 +71,6 @@
 }
 
 .history {
-  /* display: none !important; */
   grid-row: 1 / span 2;
 }
 
@@ -89,7 +88,7 @@
 
 .skillGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 
   @media print {
@@ -137,6 +136,7 @@
 }
 
 .popoverAboutFooter {
+  font-size: 0.8rem;
   color: var(--text-secondary);
   text-align: center;
 }

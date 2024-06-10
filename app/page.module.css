@@ -48,8 +48,39 @@
   }
 }
 
-.bio {
+.about {
   flex-shrink: 0;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.aboutImage {
+  align-self: center;
+  border-radius: 50%;
+}
+
+.aboutName {
+  text-align: center;
+  font-size: calc(1rem * pow(var(--font-scale), 5));
+}
+
+.aboutBio {
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.aboutFooter {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.siteCreditsButton {
+  align-self: center;
 }
 
 .bioContacts {
@@ -111,37 +142,6 @@
   & h4 {
     margin-block-end: 0.5rem;
   }
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-
-.aboutImage {
-  align-self: center;
-  border-radius: 50%;
-}
-
-.aboutName {
-  text-align: center;
-  font-size: calc(1rem * pow(var(--font-scale), 5));
-}
-
-.aboutBio {
-  text-align: center;
-  text-wrap: pretty;
-}
-
-.aboutFooter {
-  color: var(--text-secondary);
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-.siteCreditsButton {
-  align-self: center;
 }
 
 .siteCreditsPopover {

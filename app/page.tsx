@@ -51,8 +51,8 @@ export default function Home() {
         <div className={styles.column}>
           <ContentWindow
             Tag="article"
-            className={styles.bio}
-            contentClassName={styles.about}
+            className={styles.about}
+            contentClassName={styles.aboutContent}
             title="About Me"
             titleIcon={<UserRound size={18} />}
           >

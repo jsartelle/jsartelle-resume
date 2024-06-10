@@ -114,31 +114,31 @@
   }
 }
 
-.popoverAbout {
+.about {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
 
-.popoverAboutImage {
+.aboutImage {
   align-self: center;
   border-radius: 50%;
 }
 
-.popoverAboutName {
+.aboutName {
   text-align: center;
   font-size: calc(1rem * pow(var(--font-scale), 5));
 }
 
-.popoverAboutBio {
+.aboutBio {
   text-align: center;
   text-wrap: pretty;
 }
 
-.popoverAboutFooter {
-  font-size: 0.8rem;
+.aboutFooter {
   color: var(--text-secondary);
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .siteCreditsButton {

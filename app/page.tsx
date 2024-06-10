@@ -53,20 +53,20 @@ export default function Home() {
             Tag="article"
             id="aboutWindowPopover"
             className={styles.bio}
-            contentClassName={styles.popoverAbout}
+            contentClassName={styles.about}
             title="About Me"
             titleIcon={<UserRound size={18} />}
           >
             <Image
-              className={styles.popoverAboutImage}
+              className={styles.aboutImage}
               src={Photo}
               alt="A photo of myself"
               height={75}
               width={75}
             ></Image>
 
-            <div className={styles.popoverAboutName}>James Sartelle</div>
-            <p className={styles.popoverAboutBio}>{bio}</p>
+            <div className={styles.aboutName}>James Sartelle</div>
+            <p className={styles.aboutBio}>{bio}</p>
 
             {bioContacts}
 
@@ -511,7 +511,7 @@ const credits = (
       </p>
     </section>
 
-    <footer className={styles.popoverAboutFooter}>
+    <footer className={styles.aboutFooter}>
       <div>Site ©️ 2024 James Sartelle</div>
       <div>All Rights Reserved.</div>
     </footer>

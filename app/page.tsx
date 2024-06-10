@@ -161,7 +161,9 @@ const bioContacts = (
     <li>
       <Linkedin size={15} />
       <a target="_blank" href="https://www.linkedin.com/in/james-sartelle/">
-        https://www.linkedin.com/in/<wbr />james-sartelle/
+        https://www.linkedin.com/in/
+        <wbr />
+        james-sartelle/
       </a>
     </li>
   </ul>

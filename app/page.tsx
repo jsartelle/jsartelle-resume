@@ -373,7 +373,11 @@ const experienceSchwab = (
 const experienceUNC = (
   <article>
     <hgroup className={styles.experienceHead}>
-      <h4>The University of North Carolina at Charlotte</h4>
+      <h4>
+        <a target="_blank" href="https://www.charlotte.edu/">
+          The University of North Carolina at Charlotte
+        </a>
+      </h4>
       <p>May 2015</p>
       <p>Charlotte, NC</p>
       <strong>Bachelor of Science, Cum Laude, Computer Science</strong>

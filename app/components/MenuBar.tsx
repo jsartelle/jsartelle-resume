@@ -33,9 +33,9 @@ export default function MenuBar() {
         </UserRound>
       </div>
 
-      <h1 className={[styles.menuItem, styles.name].join(' ')}>
+      <div className={[styles.menuItem, styles.name, 'print-hidden'].join(' ')}>
         James Sartelle
-      </h1>
+      </div>
 
       {/* <button
         popoverTarget=""

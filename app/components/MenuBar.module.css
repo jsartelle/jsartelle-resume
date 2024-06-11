@@ -54,15 +54,7 @@
 }
 
 .name {
-  @media screen {
-    font-size: inherit;
-  }
-  @media print {
-    flex-grow: 1;
-    justify-content: center;
-    text-align: center;
-    padding-inline: 1rem;
-  }
+  font-weight: bold;
 }
 
 .aboutButton {

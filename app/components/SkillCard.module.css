@@ -86,9 +86,12 @@
       #87c7ff
     );
   background-size: var(--height) var(--height);
-  @media not (prefers-reduced-motion: reduce) {
-    /* actual speed is closer to 0.33s but this looks better */
-    animation: 1s linear infinite progressBarScroll;
+
+  @media screen and not (prefers-reduced-motion: reduce) {
+      /* actual speed is closer to 0.33s but this looks better */
+      :global(html.focused) & {
+        animation: 1s linear infinite progressBarScroll;
+      }
   }
 }
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import Script from 'next/script'
 import { Lunasima } from 'next/font/google'
 import './globals.css'
 
@@ -20,10 +20,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={font.variable}>
-        {children}
-      </body>
+    <html lang="en" className="focused">
+      <body className={font.variable}>{children}</body>
+      <Script src="./focused.js" />
     </html>
   )
 }

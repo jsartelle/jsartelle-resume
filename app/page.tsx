@@ -13,6 +13,7 @@ import {
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 import SkillCard from '@/app/components/SkillCard'
+import AquaButton from '@/app/components/AquaButton'
 
 import TigerBG from '@/public/10-4.webp'
 import Photo from '@/public/photo.jpg'
@@ -69,16 +70,16 @@ export default function Home() {
 
             {bioContacts}
 
-            <button
+            {/* TODO make this an About Me button (hobbies and stuff) and move Site Credits to the More menu */}
+            <AquaButton
               className={[
-                'aqua-button',
                 styles.siteCreditsButton,
                 'print-hidden',
               ].join(' ')}
               popoverTarget="siteCreditsPopover"
             >
               Site Credits...
-            </button>
+            </AquaButton>
           </ContentWindow>
 
           <ContentWindow

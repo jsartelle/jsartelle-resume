@@ -9,20 +9,10 @@ import JestLogo from '@/public/logos/Jest.svg'
 ### Frameworks
 
 <div className={props.styles.skillGrid}>
-	<SkillCard logo={ReactLogo} title="React" secondary="Next.js" progress={4} />
-	<SkillCard
-		logo={ReactNativeLogo}
-		title="React Native"
-		secondary="Expo"
-		progress={3}
-	/>
-	<SkillCard logo={VueLogo} title="Vue" secondary="Nuxt" progress={4} />
-	<SkillCard
-		logo={SvelteLogo}
-		title="Svelte"
-		secondary="SvelteKit"
-		progress={4}
-	/>
-	<SkillCard logo={TailwindLogo} title="Tailwind" progress={4} />
-	<SkillCard logo={JestLogo} title="Jest" progress={2} />
+	<SkillCard logo={ReactLogo} subtitle="Next.js" progress={4}>React</SkillCard>
+	<SkillCard logo={ReactNativeLogo} subtitle="Expo" progress={3}>React Native</SkillCard>
+	<SkillCard logo={VueLogo} subtitle="Nuxt" progress={4}>Vue</SkillCard>
+	<SkillCard logo={SvelteLogo} subtitle="SvelteKit" progress={4}>Svelte</SkillCard>
+	<SkillCard logo={TailwindLogo} progress={4}>Tailwind</SkillCard>
+	<SkillCard logo={JestLogo} progress={2}>Jest</SkillCard>
 </div>

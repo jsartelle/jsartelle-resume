@@ -48,9 +48,7 @@ export default function SkillCard({
         aria-valuemin={0}
         aria-valuenow={progress}
         aria-valuemax={5}
-        style={
-          { '--value-width': `${(progress / 5) * 100}%` } as React.CSSProperties
-        }
+        style={{ '--progress': progress / 5 } as React.CSSProperties}
       >
         <div className={styles.progressValue}></div>
       </div>

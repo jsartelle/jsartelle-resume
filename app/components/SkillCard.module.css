@@ -31,6 +31,7 @@
 
 .progress {
   --height: 16px;
+  overflow: hidden;
   height: var(--height);
   border-radius: 0;
   background: linear-gradient(
@@ -63,43 +64,52 @@
 }
 
 .progressValue {
-  width: var(--value-width);
+  position: relative;
+  overflow: hidden;
+  width: calc(100% * var(--progress));
+  width: round(up, 100% * var(--progress), var(--height));
   height: 100%;
-  background: radial-gradient(rgba(0, 0, 0, 0.1), transparent),
-    linear-gradient(
-      to bottom,
-      #205abb,
-      #598ed1,
-      #85b1e1,
-      #96bde7,
-      #95bce7,
-      #88b4e5,
-      #70a8e3,
-      #579ae3,
-      #4f97e9,
-      #57a2f3,
-      #67b1ff,
-      #72bdff,
-      #7ac5ff,
-      #84d1ff,
-      #8bd6ff,
-      #87c7ff
-    );
-  background-size: var(--height) var(--height);
 
   @media screen and not (prefers-reduced-motion: reduce) {
-    /* actual speed is closer to 0.33s but this looks better */
-    :global(html.focused) & {
-      animation: 1s linear infinite progressBarScroll;
+    &::after {
+      animation: calc(10s * var(--progress)) linear infinite progressBarScroll;
     }
+  }
+
+  &::after {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.1), transparent),
+      linear-gradient(
+        to bottom,
+        #205abb,
+        #598ed1,
+        #85b1e1,
+        #96bde7,
+        #95bce7,
+        #88b4e5,
+        #70a8e3,
+        #579ae3,
+        #4f97e9,
+        #57a2f3,
+        #67b1ff,
+        #72bdff,
+        #7ac5ff,
+        #84d1ff,
+        #8bd6ff,
+        #87c7ff
+      );
+    background-size: var(--height) var(--height);
+    content: '';
   }
 }
 
 @keyframes progressBarScroll {
   from {
-    background-position: 0, center;
+    translate: 0;
   }
   to {
-    background-position: calc(-1 * var(--height)), center;
+    translate: -50%;
   }
 }

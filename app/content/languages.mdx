@@ -1,0 +1,22 @@
+import SkillCard from '@/app/components/SkillCard'
+import { Database } from 'lucide-react'
+import HTML5Logo from '@/public/logos/HTML5.svg'
+import CSSLogo from '@/public/logos/CSS.svg'
+import SassLogo from '@/public/logos/Sass.svg'
+import JavaScriptLogo from '@/public/logos/JavaScript.svg'
+import TypeScriptLogo from '@/public/logos/TypeScript.svg'
+import BashLogo from '@/public/logos/Bash.svg'
+import SwiftLogo from '@/public/logos/Swift.svg'
+
+### Languages
+
+<div className={props.styles.skillGrid}>
+	<SkillCard logo={HTML5Logo} title="HTML5" progress={5} />
+	<SkillCard logo={CSSLogo} title="CSS" progress={5} />
+	<SkillCard logo={SassLogo} title="Sass" progress={5} />
+	<SkillCard logo={JavaScriptLogo} title="JavaScript" progress={5} />
+	<SkillCard logo={TypeScriptLogo} title="TypeScript" progress={5} />
+	<SkillCard LogoIcon={Database} title="MySQL" progress={3} />
+	<SkillCard logo={BashLogo} title="Shell" progress={2} />
+	<SkillCard logo={SwiftLogo} title="Swift" progress={2} />
+</div>

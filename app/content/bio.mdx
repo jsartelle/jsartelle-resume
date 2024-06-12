@@ -1,0 +1,39 @@
+import {
+	Phone,
+	Github,
+	Mail,
+	Linkedin,
+} from 'lucide-react'
+import Image from 'next/image'
+import AquaButton from '@/app/components/AquaButton'
+import Photo from '@/public/photo.jpg'
+
+export default function layout({ children }) { return children }
+
+<Image
+	className={props.styles.aboutImage}
+	src={Photo}
+	alt="A photo of myself"
+	height={75}
+	width={75}
+/>
+
+# James Sartelle
+
+A full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!
+
+- <Phone size={15} /> [980-622-9704](tel:9806229704)
+- <Github size={15} /> [jsartelle](https://github.com/jsartelle)
+- <Mail size={15} /> [jamessartelle@me.com](mailto:jamessartelle@me.com)
+- <Linkedin size={15} /> [https://www.linkedin.com/in/<wbr />james-sartelle/](https://www.linkedin.com/in/james-sartelle/)
+
+{/* TODO make this an About Me button (hobbies and stuff) and move Site Credits to the More menu */}
+<AquaButton
+	className={[
+	props.styles.creditsButton,
+	'print-hidden',
+	].join(' ')}
+	popoverTarget="siteCreditsPopover"
+>
+	Site Credits...
+</AquaButton>

@@ -40,11 +40,11 @@ export default function SkillCard({
     <article className={styles.skillCard}>
       {icon}
       <hgroup>
+        {/* FIXME should use children for this */}
         <h4 id={headerId}>{title}</h4>
         {secondary ? <p className={styles.secondary}>{secondary}</p> : null}
       </hgroup>
       {/* <progress> elements are extremely difficult to style across browsers, and animation support is limited */}
-      {/* FIXME pause animation when inactive */}
       <div
         className={styles.progress}
         role="progressbar"

@@ -1,0 +1,28 @@
+import SkillCard from '@/app/components/SkillCard'
+import ReactLogo from '@/public/logos/React.svg'
+import ReactNativeLogo from '@/public/logos/React_Native.svg'
+import VueLogo from '@/public/logos/Vue.svg'
+import SvelteLogo from '@/public/logos/Svelte.svg'
+import TailwindLogo from '@/public/logos/Tailwind.svg'
+import JestLogo from '@/public/logos/Jest.svg'
+
+### Frameworks
+
+<div className={props.styles.skillGrid}>
+	<SkillCard logo={ReactLogo} title="React" secondary="Next.js" progress={4} />
+	<SkillCard
+		logo={ReactNativeLogo}
+		title="React Native"
+		secondary="Expo"
+		progress={3}
+	/>
+	<SkillCard logo={VueLogo} title="Vue" secondary="Nuxt" progress={4} />
+	<SkillCard
+		logo={SvelteLogo}
+		title="Svelte"
+		secondary="SvelteKit"
+		progress={4}
+	/>
+	<SkillCard logo={TailwindLogo} title="Tailwind" progress={4} />
+	<SkillCard logo={JestLogo} title="Jest" progress={2} />
+</div>

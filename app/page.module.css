@@ -95,6 +95,14 @@
   flex-direction: column;
   row-gap: 2rem;
 
+  & section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
+
+.historyContent {
   & hgroup {
     display: grid;
     grid-template-columns: auto auto;
@@ -111,12 +119,6 @@
     & h4 {
       margin-block-end: 0.5rem;
     }
-  }
-
-  & section {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
   }
 }
 

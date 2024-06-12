@@ -58,7 +58,7 @@ export default function Home() {
             title="History"
             titleIcon={<Briefcase size={18} />}
             className={styles.history}
-            contentClassName={styles.resumeContent}
+            contentClassName={[styles.resumeContent, styles.historyContent].join(' ')}
           >
             <Experience styles={styles} />
             <Education styles={styles} />

@@ -1,4 +1,5 @@
 import {
+	MapPin,
 	Phone,
 	Github,
 	Mail,
@@ -21,20 +22,19 @@ export default function layout({ children }) { return children }
 
 # James Sartelle
 
-A full stack developer based in Oklahoma City, OK, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!
+Full-stack engineer with over 10 years of experience, with a focus on front-end. I'm passionate about user experience, accessibility, and making software feel delightful!
 
-- <Phone size={15} /> [980-622-9704](tel:9806229704)
-- <Github size={15} /> [jsartelle](https://github.com/jsartelle)
-- <Mail size={15} /> [jamessartelle@me.com](mailto:jamessartelle@me.com)
-- <Linkedin size={15} /> [https://www.linkedin.com/in/<wbr />james-sartelle/](https://www.linkedin.com/in/james-sartelle/)
+- <MapPin size={18} /> Oklahoma City, OK
+- <Phone size={18} /> [980-622-9704](tel:9806229704)
+- <Mail size={18} /> [jamessartelle@me.com](mailto:jamessartelle@me.com)
+- <Github size={18} /> [jsartelle](https://github.com/jsartelle)
+- <Linkedin size={18} /> [james-sartelle](https://www.linkedin.com/in/james-sartelle/)
 
-{/* TODO make this an About Me button (hobbies and stuff) and move Site Credits to the More menu */}
-<AquaButton
-	className={[
-	props.styles.creditsButton,
-	'print-hidden',
-	].join(' ')}
-	popoverTarget="siteCreditsPopover"
->
-	Site Credits...
-</AquaButton>
+<fieldset>
+	<AquaButton popoverTarget="likesPopover">
+		Stuff I Like
+	</AquaButton>
+	<AquaButton popoverTarget="siteCreditsPopover">
+		About This Site
+	</AquaButton>
+</fieldset>

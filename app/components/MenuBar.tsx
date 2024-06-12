@@ -94,7 +94,10 @@ export default function MenuBar() {
             </a>
           </li>
           <li>
-            <button popoverTarget="siteCreditsPopover">Site Credits</button>
+            <button popoverTarget="likesPopover">Stuff I Like</button>
+          </li>
+          <li>
+            <button popoverTarget="siteCreditsPopover">About This Site</button>
           </li>
         </menu>
       </details>

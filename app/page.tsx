@@ -1,10 +1,11 @@
 import styles from './page.module.css'
 import Image from 'next/image'
-import { UserRound, BookText, Briefcase, Database } from 'lucide-react'
+import { UserRound, BookText, Briefcase, ThumbsUp } from 'lucide-react'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 
 import Bio from '@/app/content/bio.mdx'
+import Hobbies from '@/app/content/hobbies.mdx'
 import Languages from '@/app/content/languages.mdx'
 import Frameworks from '@/app/content/frameworks.mdx'
 import Experience from '@/app/content/experience.mdx'
@@ -58,7 +59,10 @@ export default function Home() {
             title="History"
             titleIcon={<Briefcase size={18} />}
             className={styles.history}
-            contentClassName={[styles.resumeContent, styles.historyContent].join(' ')}
+            contentClassName={[
+              styles.resumeContent,
+              styles.historyContent,
+            ].join(' ')}
           >
             <Experience styles={styles} />
             <Education styles={styles} />
@@ -69,12 +73,22 @@ export default function Home() {
       <ContentWindow
         Tag="article"
         id="siteCreditsPopover"
-        className={styles.siteCreditsPopover}
-        contentClassName={styles.siteCredits}
+        title="About This Site"
+        contentClassName={styles.popoverContent}
         popover="auto"
-        title="Site Credits"
       >
         <Credits styles={styles} />
+      </ContentWindow>
+
+      <ContentWindow
+        Tag="article"
+        id="likesPopover"
+        title="Stuff I Like"
+        titleIcon={<ThumbsUp size={18} />}
+        contentClassName={styles.popoverContent}
+        popover="auto"
+      >
+        <Hobbies styles={styles} />
       </ContentWindow>
     </div>
   )

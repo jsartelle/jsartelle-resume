@@ -83,7 +83,7 @@ export default function Home() {
       <ContentWindow
         Tag="article"
         id="likesPopover"
-        title="Stuff I Like"
+        title="Things I Like"
         titleIcon={<ThumbsUp size={18} />}
         contentClassName={styles.popoverContent}
         popover="auto"

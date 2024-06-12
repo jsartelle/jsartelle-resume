@@ -19,7 +19,7 @@
     margin: auto;
     padding: 0;
     max-height: min(1000px, 100dvh);
-    width: min(300px, 100vw);
+    width: min(500px, 100vw);
     transition: opacity, display;
     transition-duration: 0.25s;
     transition-behavior: allow-discrete;

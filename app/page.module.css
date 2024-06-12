@@ -132,11 +132,6 @@
   }
 }
 
-.siteCreditsPopover {
-  /* FIXME avoid needing !important */
-  width: min(500px, 100vw) !important;
-}
-
 .siteCredits {
   display: flex;
   flex-direction: column;

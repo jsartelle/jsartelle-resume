@@ -93,6 +93,9 @@ export default function MenuBar() {
               Development Notes...
             </a>
           </li>
+          <li>
+            <button popoverTarget="siteCreditsPopover">Site Credits</button>
+          </li>
         </menu>
       </details>
 

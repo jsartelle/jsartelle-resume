@@ -111,7 +111,6 @@
 
   & > li {
     position: relative;
-    padding-inline: 22px;
 
     &:hover,
     &:focus-within {
@@ -120,8 +119,9 @@
       color: white;
     }
 
-    & > a {
+    & > * {
       all: unset;
+      padding-inline: 22px;
     }
   }
 }

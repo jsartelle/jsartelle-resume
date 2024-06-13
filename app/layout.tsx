@@ -9,7 +9,7 @@ const font = Lunasima({
 })
 
 export const metadata: Metadata = {
-  title: 'James Sartelle',
+  title: 'James Sartelle - Resume',
   description: 'Full Stack Software Engineer',
 }
 

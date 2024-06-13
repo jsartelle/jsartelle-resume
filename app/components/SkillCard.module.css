@@ -13,7 +13,7 @@
   }
 
   @media print {
-    border: 1px solid #8b8b8b;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     padding-block: 0.5rem;
     grid-template: auto / 25px auto;
 

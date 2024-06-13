@@ -4,12 +4,8 @@ import PrintButton from '@/app/components/PrintButton'
 
 export default function MenuBar() {
   return (
-    <header className={styles.menubar}>
-      <div
-        className={[styles.menuItem, styles.profileIcon, 'print-hidden'].join(
-          ' '
-        )}
-      >
+    <header className={[styles.menubar, 'print-hidden'].join(' ')}>
+      <div className={[styles.menuItem, styles.profileIcon].join(' ')}>
         <UserRound
           id="lucideUserRound"
           fill="url(#menuButtonBgGradient)"
@@ -33,23 +29,20 @@ export default function MenuBar() {
         </UserRound>
       </div>
 
-      <div className={[styles.menuItem, styles.name, 'print-hidden'].join(' ')}>
+      <div className={[styles.menuItem, styles.name].join(' ')}>
         James Sartelle
       </div>
 
       {/* <button
         popoverTarget=""
-        className={[styles.menuItem, styles.aboutButton, 'print-hidden'].join(
+        className={[styles.menuItem, styles.aboutButton].join(
           ' '
         )}
       >
         About
       </button> */}
 
-      <details
-        name="menubar"
-        className={[styles.menuWrapper, 'print-hidden'].join(' ')}
-      >
+      <details name="menubar" className={styles.menuWrapper}>
         <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
           Contact
         </summary>
@@ -80,10 +73,7 @@ export default function MenuBar() {
         </menu>
       </details>
 
-      <details
-        name="menubar"
-        className={[styles.menuWrapper, 'print-hidden'].join(' ')}
-      >
+      <details name="menubar" className={styles.menuWrapper}>
         <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
           More
         </summary>

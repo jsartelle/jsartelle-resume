@@ -12,6 +12,10 @@
   @media print {
     padding-block: 0.5rem;
     grid-template: auto / 25px auto;
+
+    & hgroup {
+      grid-row: span 2;
+    }
   }
 }
 

@@ -42,7 +42,7 @@ export default function SkillCard({
       </hgroup>
       {/* <progress> elements are extremely difficult to style across browsers, and animation support is limited */}
       <div
-        className={styles.progress}
+        className={[styles.progress, 'print-hidden'].join(' ')}
         role="progressbar"
         aria-labelledby={headerId}
         aria-valuemin={0}

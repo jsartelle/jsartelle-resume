@@ -8,10 +8,6 @@
   margin-inline-start: auto;
   padding-block: 2px;
 
-  @media (scripting: none) {
-    display: none;
-  }
-
   &:active,
   &:focus-visible {
     outline: none;

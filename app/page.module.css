@@ -92,7 +92,7 @@
 }
 
 .aboutDownloadLink {
-  all: unset;
+  color: inherit;
 }
 
 .history {

@@ -1,6 +1,6 @@
 import styles from './MenuBar.module.css'
 import { UserRound } from 'lucide-react'
-import DownloadButton from '@/app/components/DownloadButton'
+import ShareButton from '@/app/components/ShareButton'
 
 export default function MenuBar() {
   return (
@@ -92,7 +92,7 @@ export default function MenuBar() {
         </menu>
       </details>
 
-      <DownloadButton />
+      <ShareButton />
     </header>
   )
 }

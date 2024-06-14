@@ -1,10 +1,16 @@
 import type { ButtonHTMLAttributes } from 'react'
 import styles from './AquaButton.module.css'
 
+export interface AquaButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  primary?: boolean
+}
+
 export default function AquaButton({
+  primary = false,
   className,
   ...props
-}: ButtonHTMLAttributes<HTMLButtonElement>) {
-  const mergedClasses = [className, styles.aquaButton].join(' ')
+}: AquaButtonProps) {
+  const mergedClasses = [className, styles.aquaButton, primary && styles.primary].join(' ')
   return <button className={mergedClasses} {...props}></button>
 }

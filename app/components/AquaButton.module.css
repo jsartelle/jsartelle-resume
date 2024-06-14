@@ -1,4 +1,12 @@
 .aquaButton {
+  --primary-bg: linear-gradient(
+    to bottom,
+    #c8d5ed,
+    #97c2ee 40%,
+    #6eadee 40%,
+    #aff9ff
+  );
+
   --button-bg: linear-gradient(
     to bottom,
     #f9f9f9,
@@ -25,13 +33,24 @@
   }
 
   &:active {
-    --button-bg: linear-gradient(
-      to bottom,
-      #c8d5ed,
-      #97c2ee 40%,
-      #6eadee 40%,
-      #aff9ff
-    );
+    --button-bg: var(--primary-bg);
     --button-border-bg: linear-gradient(to bottom, #272798, #616161);
+  }
+}
+
+.primary {
+  --button-bg: var(--primary-bg);
+
+  &:not(:active) {
+    animation: 0.5s linear infinite alternate darken;
+  }
+}
+
+@keyframes darken {
+  from {
+    filter: brightness(1) saturate(1);
+  }
+  to {
+    filter: brightness(0.9) saturate(1.5);
   }
 }

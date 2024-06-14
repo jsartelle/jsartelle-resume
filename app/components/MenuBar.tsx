@@ -84,7 +84,9 @@ export default function MenuBar() {
             </a>
           </li>
           <li>
-            <button popoverTarget="likesPopover">Things I Like</button>
+            <a target="_blank" href="https://github.com/jsartelle/jsartelle-resume">
+              View Source...
+            </a>
           </li>
           <li>
             <button popoverTarget="siteCreditsPopover">About This Site</button>

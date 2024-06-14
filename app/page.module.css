@@ -90,6 +90,10 @@
   border-radius: 50%;
 }
 
+.aboutDownloadLink {
+  all: unset;
+}
+
 .history {
   grid-row: 1 / span 2;
 }

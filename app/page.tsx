@@ -28,6 +28,7 @@ export default function Home() {
         quality={100}
         sizes="100vw"
         style={{ objectFit: 'cover' }}
+        priority
         draggable="false"
       />
 

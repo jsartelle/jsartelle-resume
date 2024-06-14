@@ -1,21 +1,28 @@
 'use client'
-import { Share, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Share } from 'lucide-react'
 import styles from './ShareButton.module.css'
 
 export default function ShareButton() {
-  const data: ShareData = {
-    url: location.href,
-  }
+  const [shareData, setShareData] = useState<ShareData | null>(null)
 
-  const canShare = navigator.canShare?.(data)
+  useEffect(() => {
+    const data: ShareData = {
+      url: location.href,
+    }
 
-  return canShare ? (
+    if (navigator.canShare?.(data)) {
+      setShareData(data)
+    }
+  }, [])
+
+  return shareData ? (
     <button className={styles.button} aria-label="Share">
       <div className={styles.icon}>
         <Share
           size={15}
           strokeWidth={3}
-          onClick={() => navigator.share(data)}
+          onClick={() => navigator.share(shareData)}
         />
       </div>
     </button>

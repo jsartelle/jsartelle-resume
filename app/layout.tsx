@@ -11,6 +11,9 @@ const font = Lunasima({
 export const metadata: Metadata = {
   title: 'James Sartelle - Resume',
   description: 'Full Stack Software Engineer',
+  other: {
+    'darkreader-lock': 'meta'
+  },
 }
 
 export default function RootLayout({

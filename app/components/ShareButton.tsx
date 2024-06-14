@@ -9,6 +9,7 @@ export default function ShareButton() {
   useEffect(() => {
     const data: ShareData = {
       url: location.href,
+      title: 'James Sartelle - Resume',
     }
 
     if (navigator.canShare?.(data)) {

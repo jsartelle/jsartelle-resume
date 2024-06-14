@@ -14,6 +14,7 @@
   background: var(--button-bg), var(--button-border-bg);
   background-clip: padding-box, border-box;
   box-shadow: var(--widget-box-shadow);
+  white-space: nowrap;
   user-select: none;
   padding-inline: 14px;
 

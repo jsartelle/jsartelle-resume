@@ -79,7 +79,7 @@ export default function MenuBar() {
         </summary>
         <menu className={styles.menu}>
           <li>
-            <a target="_blank" href="https://jsartelle-dev-notes.vercel.app/">
+            <a target="_blank" href="https://notes.sartelle.dev/">
               Development Notes...
             </a>
           </li>

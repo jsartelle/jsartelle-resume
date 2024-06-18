@@ -29,23 +29,19 @@ export default function MenuBar() {
         </UserRound>
       </div>
 
-      <div className={[styles.menuItem, styles.name].join(' ')}>
-        James Sartelle
-      </div>
-
-      {/* <button
-        popoverTarget=""
-        className={[styles.menuItem, styles.aboutButton].join(
-          ' '
-        )}
-      >
-        About
-      </button> */}
+      <details name="menubar" className={styles.menuWrapper}>
+        <summary className={[styles.menuItem, styles.name].join(' ')}>
+          James Sartelle
+        </summary>
+        <menu className={styles.menu}>
+          <li>
+            <button popoverTarget="aboutMePopover">About Me</button>
+          </li>
+        </menu>
+      </details>
 
       <details name="menubar" className={styles.menuWrapper}>
-        <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
-          Contact
-        </summary>
+        <summary className={styles.menuItem}>Contact</summary>
         <menu className={styles.menu}>
           <li>
             <a target="_blank" href="tel:9806229704">
@@ -74,22 +70,28 @@ export default function MenuBar() {
       </details>
 
       <details name="menubar" className={styles.menuWrapper}>
-        <summary className={[styles.menuItem, styles.contactButton].join(' ')}>
-          More
-        </summary>
+        <summary className={styles.menuItem}>More</summary>
         <menu className={styles.menu}>
           <li>
-            <a target="_blank" href="https://notes.sartelle.dev/">
-              Development Notes...
-            </a>
+            <button popoverTarget="siteCreditsPopover">About This Site</button>
           </li>
           <li>
-            <a target="_blank" href="https://github.com/jsartelle/jsartelle-resume">
+            <a
+              target="_blank"
+              href="https://github.com/jsartelle/jsartelle-resume"
+            >
               View Source...
             </a>
           </li>
           <li>
-            <button popoverTarget="siteCreditsPopover">About This Site</button>
+            <a target="_blank" href="https://links.sartelle.dev/">
+              Link Garden...
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://notes.sartelle.dev/">
+              Development Notes...
+            </a>
           </li>
         </menu>
       </details>

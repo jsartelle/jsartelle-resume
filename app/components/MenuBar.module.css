@@ -68,14 +68,6 @@
   }
 }
 
-.contactButton {
-  list-style-type: none;
-
-  &::-webkit-details-marker {
-    display: none;
-  }
-}
-
 .menuWrapper {
   cursor: default;
 }

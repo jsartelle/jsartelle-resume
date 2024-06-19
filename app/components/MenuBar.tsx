@@ -42,7 +42,7 @@ export default function MenuBar() {
 
       <details name="menubar" className={styles.menuWrapper}>
         <summary className={styles.menuItem}>Contact</summary>
-        <menu className={styles.menu}>
+        <menu className={[styles.menu, styles.offscreenFix].join(' ')}>
           <li>
             <a target="_blank" href="tel:9806229704">
               Dial 980-622-9704...
@@ -71,7 +71,7 @@ export default function MenuBar() {
 
       <details name="menubar" className={styles.menuWrapper}>
         <summary className={styles.menuItem}>More</summary>
-        <menu className={styles.menu}>
+        <menu className={[styles.menu, styles.offscreenFix].join(' ')}>
           <li>
             <button popoverTarget="siteCreditsPopover">About This Site</button>
           </li>

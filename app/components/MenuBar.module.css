@@ -84,11 +84,6 @@
   list-style-type: none;
   padding-block: 4px;
 
-  /* fix menu going off screen - not ideal, but best we can do without JavaScript I think */
-  @media (width < 600px) {
-    right: 0;
-  }
-
   @media not (prefers-reduced-transparency: reduce) {
     &::before {
       opacity: 0.95;
@@ -108,6 +103,7 @@
 
   & > li {
     position: relative;
+    white-space: nowrap;
 
     &:hover,
     &:focus-within {
@@ -120,5 +116,12 @@
       all: unset;
       padding-inline: 22px;
     }
+  }
+}
+
+.offscreenFix {
+  /* fix menus going off screen - not ideal, but best we can do without JavaScript I think */
+  @media (width < 500px) {
+    right: 0;
   }
 }

@@ -157,5 +157,9 @@
   flex-grow: 1;
   overflow: scroll;
   padding: 1rem;
-  background: #ebecec;
+  background: var(--pinstripe-bg);
+
+  @media print {
+    background: #ebecec;
+  }
 }

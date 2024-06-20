@@ -47,6 +47,13 @@
 }
 
 @layer base {
+  @page {
+    margin: 1rem 0;
+  }
+  @page :first {
+    margin-block-start: 0;
+  }
+
   @media screen {
     :root {
       --font-scale: 1.125;
@@ -69,14 +76,6 @@
 
     .print-hidden {
       display: none !important;
-    }
-  }
-
-  @page {
-    margin: 1rem 0;
-
-    &:first {
-      margin-block-start: 0;
     }
   }
 

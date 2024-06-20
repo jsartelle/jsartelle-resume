@@ -35,7 +35,7 @@ export default function MenuBar() {
         </summary>
         <menu className={styles.menu}>
           <li>
-            <button popoverTarget="aboutMePopover">About Me</button>
+            <button popoverTarget="likesPopover">Things I Like</button>
           </li>
         </menu>
       </details>

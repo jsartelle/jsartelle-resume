@@ -1,11 +1,11 @@
 import styles from './page.module.css'
 import Image from 'next/image'
-import { UserRound, BookText, Briefcase } from 'lucide-react'
+import { UserRound, BookText, Briefcase, ThumbsUp } from 'lucide-react'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 
 import Bio from '@/app/content/bio.mdx'
-import Hobbies from '@/app/content/hobbies.mdx'
+import Likes from '@/app/content/likes.mdx'
 import Languages from '@/app/content/languages.mdx'
 import Frameworks from '@/app/content/frameworks.mdx'
 import Experience from '@/app/content/experience.mdx'
@@ -83,12 +83,13 @@ export default function Home() {
 
       <ContentWindow
         Tag="article"
-        id="aboutMePopover"
-        title="About Me"
+        id="likesPopover"
+        title="Things I Like"
+        titleIcon={<ThumbsUp size={18} />}
         contentClassName={styles.popoverContent}
         popover="auto"
       >
-        <Hobbies styles={styles} />
+        <Likes styles={styles} />
       </ContentWindow>
     </div>
   )

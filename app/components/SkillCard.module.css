@@ -88,7 +88,7 @@
     position: absolute;
     width: 200%;
     height: 100%;
-    background: radial-gradient(rgba(0, 0, 0, 0.1), transparent),
+    background: var(--pulse-overlay-bg),
       linear-gradient(
         to bottom,
         #205abb,

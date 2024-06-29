@@ -1,25 +1,13 @@
 .aquaButton {
-  --primary-bg: linear-gradient(
-    to bottom,
-    #c8d5ed,
-    #97c2ee 40%,
-    #6eadee 40%,
-    #aff9ff
-  );
-
-  --button-bg: linear-gradient(
-    to bottom,
-    #f9f9f9,
-    #ededed 40%,
-    #dadada 40%,
-    #ffffff
-  );
-  --button-border-bg: linear-gradient(to bottom, #8b8b8b, #505050);
+  --button-active-gradient: #c8d5ed, #97c2ee 40%, #6eadee 40%, #aff9ff;
+  --border-gradient: #8b8b8b, #505050;
+  --border-active-gradient: #272798, #616161;
   min-width: 91px;
   height: 28px;
   border: 1px solid transparent;
   border-radius: 9999px;
-  background: var(--button-bg), var(--button-border-bg);
+  background: linear-gradient(to bottom, var(--button-gradient)),
+    linear-gradient(to bottom, var(--border-gradient));
   background-clip: padding-box, border-box;
   box-shadow: var(--widget-box-shadow);
   white-space: nowrap;
@@ -27,19 +15,20 @@
   padding-inline: 14px;
 
   &:focus-visible {
-    --button-border-bg: linear-gradient(#6f89a0, #6f89a0);
+    --border-gradient: #6f89a0, #6f89a0;
     outline: none;
     box-shadow: var(--focus-box-shadow);
   }
 
   &:active {
-    --button-bg: var(--primary-bg);
-    --button-border-bg: linear-gradient(to bottom, #272798, #616161);
+    --button-gradient: var(--button-active-gradient);
+    --border-gradient: var(--border-active-gradient);
   }
 }
 
 .primary {
-  --button-bg: var(--primary-bg);
+  --button-gradient: var(--button-active-gradient);
+  --border-gradient: var(--border-active-gradient);
 
   &:not(:active) {
     animation: 0.5s linear infinite alternate darken;

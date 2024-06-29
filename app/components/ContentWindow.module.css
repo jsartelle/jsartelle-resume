@@ -1,3 +1,4 @@
+/* TODO inactive window and control state, using JavaScript to set inactive class */
 .window {
   display: flex;
   flex-direction: column;
@@ -30,7 +31,6 @@
   }
 }
 
-/* TODO would be fun to have window focus states */
 .titlebar {
   position: relative;
   display: flex;
@@ -155,7 +155,7 @@
 
 .content {
   flex-grow: 1;
-  overflow: scroll;
+  overflow: auto;
   padding: 1rem;
   background: var(--pinstripe-bg);
 

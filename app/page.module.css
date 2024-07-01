@@ -55,6 +55,8 @@
 }
 
 .aboutWindow {
+  flex-shrink: 0;
+
   & fieldset {
     all: unset;
     display: flex;
@@ -98,7 +100,7 @@
   color: inherit;
 }
 
-.historyWindow {
+.history {
   grid-row: 1 / span 2;
 }
 

@@ -59,7 +59,7 @@ export default function Home() {
           <ContentWindow
             title="History"
             titleIcon={<Briefcase size={18} />}
-            className={styles.historyWindow}
+            className={styles.history}
             contentClassName={[
               styles.resumeContent,
               styles.historyContent,

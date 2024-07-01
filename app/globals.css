@@ -54,16 +54,6 @@
     margin-block-start: 0;
   }
 
-  @media screen {
-    :root {
-      --font-scale: 1.125;
-    }
-
-    .print-only {
-      display: none !important;
-    }
-  }
-
   @media print {
     :root {
       --font-scale: 1.125;
@@ -76,6 +66,110 @@
 
     .print-hidden {
       display: none !important;
+    }
+  }
+
+  @media screen {
+    :root {
+      --font-scale: 1.125;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .print-only {
+      display: none !important;
+    }
+
+    ::-webkit-scrollbar {
+      width: var(--scrollbar-size);
+      height: var(--scrollbar-size);
+      outline: 1px solid var(--scrollbar-outline-color);
+    }
+
+    ::-webkit-scrollbar-track {
+      --track-dir: right;
+      --track-gradient: #b8b8b8, #c0c0c0, #c8c8c8, #d3d3d3, #dbdbdb, #e4e4e4,
+        #ebebeb, #ebebeb, #f1f1f1, #f6f6f6, #fafafa, #fbfbfb, #fcfcfc, #f9f9f9,
+        #f4f4f4, #efefef;
+      background: linear-gradient(to var(--track-dir), var(--track-gradient));
+    }
+
+    ::-webkit-scrollbar-track:horizontal {
+      --track-dir: bottom;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      --border-color: #0139b3;
+      --cap-dir: bottom;
+      /* TODO could do this more accurately with two half circles */
+      --cap-gradient: #0139b3bd, transparent 7.5px,
+        transparent calc(100% - 7.5px), #0139b3bd;
+      --scrollbar-dir: right;
+      --scrollbar-gradient: #0139b3, #75a7e0, #96bfe9, #95bde9, #8ebbeb, #579be7,
+        #6cabf3, #7cbbff, #8eccff, #9adaff, #a8ebfe, #9fe0ff, #5c5c5c;
+      border: 1px solid var(--border-color);
+      border-radius: 9999px;
+      background: linear-gradient(to var(--cap-dir), var(--cap-gradient)),
+        var(--pulse-overlay-bg) 0% 0% / var(--scrollbar-size)
+          var(--scrollbar-size) fixed,
+        linear-gradient(to var(--scrollbar-dir), var(--scrollbar-gradient));
+      background-blend-mode: multiply, normal, normal;
+    }
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+      --border-color: #8b8b8b;
+      --cap-gradient: rgba(0, 0, 0, 0.25), transparent 7.5px,
+        transparent calc(100% - 7.5px), rgba(0, 0, 0, 0.25);
+      background: linear-gradient(to var(--cap-dir), var(--cap-gradient)),
+        linear-gradient(to var(--scrollbar-dir), var(--button-gradient));
+    }
+
+    ::-webkit-scrollbar-thumb:horizontal {
+      --cap-dir: right;
+      --scrollbar-dir: bottom;
+    }
+
+    ::-webkit-scrollbar-button {
+      --button-dir: bottom;
+      --border-color: #969696;
+      --arrow-bg: /* left */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA2IDciIHdpZHRoPSI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0wIDMuNSA2IDMuNXYtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+      display: block;
+      width: var(--scrollbar-size);
+      height: var(--scrollbar-size);
+      border-left: 1px solid var(--border-color);
+      background: var(--arrow-bg) center no-repeat,
+        linear-gradient(to var(--button-dir), var(--button-gradient));
+    }
+
+    ::-webkit-scrollbar-button:active {
+      --button-gradient: #99a4de, #9fc2ea 40%, #4487d3 40%, #6abdf7;
+      --border-color: #2068c6;
+    }
+
+    ::-webkit-scrollbar-button:increment {
+      --arrow-bg: /* right */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA2IDciIHdpZHRoPSI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im02IDMuNS02IDMuNXYtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+    }
+
+    ::-webkit-scrollbar-button:vertical {
+      --button-dir: right;
+      --arrow-bg: /* up */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA3IDYiIHdpZHRoPSI3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zLjUgMCAzLjUgNmgtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+      border-top: 1px solid var(--border-color);
+      border-left: none;
+    }
+
+    ::-webkit-scrollbar-button:vertical:increment {
+      --arrow-bg: /* down */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA3IDYiIHdpZHRoPSI3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zLjUgNiAzLjUtNmgtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+    }
+
+    ::-webkit-scrollbar-button:start {
+      display: none;
+    }
+
+    ::-webkit-scrollbar-corner {
+      outline: 1px solid var(--scrollbar-outline-color);
+      background-color: white;
     }
   }
 
@@ -126,94 +220,5 @@
   }
   button {
     color: inherit;
-  }
-
-  ::-webkit-scrollbar {
-    width: var(--scrollbar-size);
-    height: var(--scrollbar-size);
-    outline: 1px solid var(--scrollbar-outline-color);
-  }
-
-  ::-webkit-scrollbar-track {
-    --track-dir: right;
-    --track-gradient: #b8b8b8, #c0c0c0, #c8c8c8, #d3d3d3, #dbdbdb, #e4e4e4,
-      #ebebeb, #ebebeb, #f1f1f1, #f6f6f6, #fafafa, #fbfbfb, #fcfcfc, #f9f9f9,
-      #f4f4f4, #efefef;
-    background: linear-gradient(to var(--track-dir), var(--track-gradient));
-  }
-
-  ::-webkit-scrollbar-track:horizontal {
-    --track-dir: bottom;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    --border-color: #0139b3;
-    --cap-dir: bottom;
-    /* TODO could do this more accurately with two half circles */
-    --cap-gradient: #0139b3bd, transparent 7.5px, transparent calc(100% - 7.5px),
-      #0139b3bd;
-    --scrollbar-dir: right;
-    --scrollbar-gradient: #0139b3, #75a7e0, #96bfe9, #95bde9, #8ebbeb, #579be7,
-      #6cabf3, #7cbbff, #8eccff, #9adaff, #a8ebfe, #9fe0ff, #5c5c5c;
-    border: 1px solid var(--border-color);
-    border-radius: 9999px;
-    background: linear-gradient(to var(--cap-dir), var(--cap-gradient)),
-      var(--pulse-overlay-bg) 0% 0% / var(--scrollbar-size)
-        var(--scrollbar-size) fixed,
-      linear-gradient(to var(--scrollbar-dir), var(--scrollbar-gradient));
-    background-blend-mode: multiply, normal, normal;
-  }
-
-  ::-webkit-scrollbar-thumb:window-inactive {
-    --border-color: #8b8b8b;
-    --cap-gradient: rgba(0, 0, 0, 0.25), transparent 7.5px,
-      transparent calc(100% - 7.5px), rgba(0, 0, 0, 0.25);
-    background: linear-gradient(to var(--cap-dir), var(--cap-gradient)),
-      linear-gradient(to var(--scrollbar-dir), var(--button-gradient));
-  }
-
-  ::-webkit-scrollbar-thumb:horizontal {
-    --cap-dir: right;
-    --scrollbar-dir: bottom;
-  }
-
-  ::-webkit-scrollbar-button {
-    --button-dir: bottom;
-    --border-color: #969696;
-    --arrow-bg: /* left */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA2IDciIHdpZHRoPSI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0wIDMuNSA2IDMuNXYtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-    width: var(--scrollbar-size);
-    height: var(--scrollbar-size);
-    border-left: 1px solid var(--border-color);
-    background: var(--arrow-bg) center no-repeat,
-      linear-gradient(to var(--button-dir), var(--button-gradient));
-  }
-
-  ::-webkit-scrollbar-button:active {
-    --button-gradient: #99a4de, #9fc2ea 40%, #4487d3 40%, #6abdf7;
-    --border-color: #2068c6;
-  }
-
-  ::-webkit-scrollbar-button:increment {
-    --arrow-bg: /* right */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA2IDciIHdpZHRoPSI2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im02IDMuNS02IDMuNXYtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-  }
-
-  ::-webkit-scrollbar-button:vertical {
-    --button-dir: right;
-    --arrow-bg: /* up */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA3IDYiIHdpZHRoPSI3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zLjUgMCAzLjUgNmgtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-    border-top: 1px solid var(--border-color);
-    border-left: none;
-  }
-
-  ::-webkit-scrollbar-button:vertical:increment {
-    --arrow-bg: /* down */ url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCA3IDYiIHdpZHRoPSI3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zLjUgNiAzLjUtNmgtN3oiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
-  }
-
-  ::-webkit-scrollbar-button:start {
-    display: none;
-  }
-
-  ::-webkit-scrollbar-corner {
-    outline: 1px solid var(--scrollbar-outline-color);
-    background-color: white;
   }
 }

@@ -72,6 +72,12 @@
   text-align: center;
   row-gap: 1rem;
 
+  & aside {
+    display: inline;
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+
   & ul {
     display: grid;
     text-align: start;

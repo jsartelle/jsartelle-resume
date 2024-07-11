@@ -1,4 +1,4 @@
-/* TODO inactive window and control state, using JavaScript to set inactive class */
+/* TODO inactive window and control state - use wrapping client component to set inactive class */
 .window {
   display: flex;
   flex-direction: column;

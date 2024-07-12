@@ -1,6 +1,7 @@
 import styles from './page.module.css'
 import Image from 'next/image'
 import { UserRound, BookText, Briefcase, ThumbsUp } from 'lucide-react'
+import WindowInactive from '@/app/components/WindowInactive'
 import MenuBar from '@/app/components/MenuBar'
 import ContentWindow from '@/app/components/ContentWindow'
 
@@ -91,6 +92,8 @@ export default function Home() {
       >
         <Likes styles={styles} />
       </ContentWindow>
+
+      <WindowInactive />
     </div>
   )
 }

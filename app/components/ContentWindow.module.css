@@ -38,7 +38,7 @@
   justify-content: space-between;
   /* TODO shorter titlebar for About windows */
   height: 32px;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 2px solid #9e9e9e;
   background: linear-gradient(to bottom, #fafafa 1px, #f2f2f2 1px, #d4d4d4);
   text-align: center;
   user-select: none;
@@ -75,7 +75,7 @@
 }
 
 .titleButton {
-  --inset-shadow: inset 0 0 1px 1.5px rgba(0, 0, 0, 0.5);
+  --inset-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,11 +94,11 @@
       ),
       radial-gradient(
         ellipse 60% 70% at center bottom,
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.8),
         transparent
       );
-    /* background-blend-mode: normal, overlay; */
+    background-blend-mode: normal, overlay;
     box-shadow: var(--inset-shadow), 0 1px 1px white;
   }
 
@@ -137,15 +137,15 @@
 }
 
 .buttonRed {
-  background-color: #c2392e;
+  background-color: #c44a44;
 }
 
 .buttonYellow {
-  background-color: #f1a816;
+  background-color: #e89e28;
 }
 
 .buttonGreen {
-  background-color: #66aa20;
+  background-color: #6aa71e;
 }
 
 .buttonPill {

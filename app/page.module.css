@@ -104,6 +104,7 @@
 
 .aboutDownloadLink {
   color: inherit;
+  cursor: default;
 }
 
 .history {

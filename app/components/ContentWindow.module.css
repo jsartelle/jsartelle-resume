@@ -163,9 +163,9 @@
 }
 
 .buttonPill {
+  background-color: #b5b5b5;
   width: 30px;
   height: 15px;
-  /* FIXME give this more definition (like in the inactive state */
 }
 
 .content {

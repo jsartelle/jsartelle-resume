@@ -26,7 +26,7 @@
   }
 }
 
-.primary {
+.primary:not(:global(.window-inactive) .primary) {
   --button-gradient: var(--button-active-gradient);
   --border-gradient: var(--border-active-gradient);
 

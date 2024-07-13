@@ -10,6 +10,10 @@
 
   @media screen {
     box-shadow: var(--panel-box-shadow);
+
+    :global(.window-inactive) & {
+      /* FIXME reduce shadow strength */
+    }
   }
 
   &[popover] {
@@ -45,11 +49,16 @@
   grid-template-columns: 1fr auto 1fr;
   padding-inline: 12px;
 
+  :global(.window-inactive) & {
+    background: var(--pinstripe-bg);
+    color: var(--text-secondary);
+  }
+
   & > div {
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 
     &:last-child {
       justify-content: flex-end;
@@ -102,6 +111,11 @@
     box-shadow: var(--inset-shadow), 0 1px 1px white;
   }
 
+  :global(.window-inactive) & {
+    opacity: 0.75;
+    background-color: #b5b5b5 !important;
+  }
+
   @media print {
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
@@ -151,6 +165,7 @@
 .buttonPill {
   width: 30px;
   height: 15px;
+  /* FIXME give this more definition (like in the inactive state */
 }
 
 .content {

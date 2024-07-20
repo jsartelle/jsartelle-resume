@@ -112,8 +112,10 @@
     content: '';
   }
 
-  :global(.window-inactive) &::after {
-    filter: saturate(0) brightness(1.25);
+  @media screen {
+    :global(.window-inactive) &::after {
+      filter: saturate(0) brightness(1.25);
+    }
   }
 }
 

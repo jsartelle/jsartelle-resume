@@ -48,9 +48,11 @@
   grid-template-columns: 1fr auto 1fr;
   padding-inline: 12px;
 
-  :global(.window-inactive) & {
-    background: var(--pinstripe-bg);
-    color: var(--text-secondary);
+  @media screen {
+    :global(.window-inactive) & {
+      background: var(--pinstripe-bg);
+      color: var(--text-secondary);
+    }
   }
 
   & > div {
@@ -108,15 +110,15 @@
       );
     background-blend-mode: normal, overlay;
     box-shadow: var(--inset-shadow), 0 1px 1px white;
+
+    :global(.window-inactive) & {
+      opacity: 0.5;
+      background-color: #b5b5b5 !important;
+    }
   }
 
   @media print {
     border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-
-  :global(.window-inactive) & {
-    opacity: 0.5;
-    background-color: #b5b5b5 !important;
   }
 
   &:focus-visible:not(:active) {

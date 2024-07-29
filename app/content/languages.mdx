@@ -2,21 +2,21 @@ import SkillCard from '@/app/components/SkillCard'
 import { Database } from 'lucide-react'
 import HTML5Logo from '@/public/logos/HTML5.svg'
 import CSSLogo from '@/public/logos/CSS.svg'
-import SassLogo from '@/public/logos/Sass.svg'
 import JavaScriptLogo from '@/public/logos/JavaScript.svg'
 import TypeScriptLogo from '@/public/logos/TypeScript.svg'
 import BashLogo from '@/public/logos/Bash.svg'
 import SwiftLogo from '@/public/logos/Swift.svg'
+import PythonLogo from '@/public/logos/Python.svg'
 
 ### Languages
 
 <div className={props.styles.skillGrid}>
 	<SkillCard logo={HTML5Logo} progress={5}>HTML5</SkillCard>
 	<SkillCard logo={CSSLogo} progress={5}>CSS</SkillCard>
-	<SkillCard logo={SassLogo} progress={5}>Sass</SkillCard>
 	<SkillCard logo={JavaScriptLogo} progress={5}>JavaScript</SkillCard>
 	<SkillCard logo={TypeScriptLogo} progress={5}>TypeScript</SkillCard>
 	<SkillCard LogoIcon={Database} progress={3}>MySQL</SkillCard>
 	<SkillCard logo={BashLogo} progress={2}>Shell</SkillCard>
 	<SkillCard logo={SwiftLogo} progress={2}>Swift</SkillCard>
+	<SkillCard logo={PythonLogo} progress={2}>Python</SkillCard>
 </div>

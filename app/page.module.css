@@ -12,6 +12,10 @@
   width: 100vw;
   height: 100%;
   grid-area: 2 / 1;
+
+  @media (forced-colors: active) {
+    display: none;
+  }
 }
 
 .desktop {

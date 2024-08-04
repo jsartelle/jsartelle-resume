@@ -34,9 +34,11 @@
   &:active,
   &:focus-visible,
   details[open] & {
-    outline: none;
-    background: var(--menu-item-active-bg);
-    color: white;
+    @media (forced-colors: none) {
+      outline: none;
+      background: var(--menu-item-active-bg);
+      color: white;
+    }
   }
 
   &::-webkit-details-marker {
@@ -90,6 +92,11 @@
     }
   }
 
+  @media (forced-colors: active) {
+    background-color: Canvas;
+    border: 1px solid ButtonBorder;
+  }
+
   &::before {
     /* background on separate layer to control opacity */
     position: absolute;
@@ -110,6 +117,11 @@
       outline: none;
       background: var(--menu-option-active-bg);
       color: white;
+
+      @media (forced-colors: active) {
+        background: CanvasText;
+        color: Canvas;
+      }
     }
 
     & > * {

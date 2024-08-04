@@ -15,9 +15,11 @@
   padding-inline: 14px;
 
   &:focus-visible {
-    --border-gradient: #6f89a0, #6f89a0;
-    outline: none;
-    box-shadow: var(--focus-box-shadow);
+    @media (forced-colors: none) {
+      --border-gradient: #6f89a0, #6f89a0;
+      outline: none;
+      box-shadow: var(--focus-box-shadow);
+    }
   }
 
   &:active {

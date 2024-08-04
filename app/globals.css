@@ -116,6 +116,13 @@
           var(--scrollbar-size) fixed,
         linear-gradient(to var(--scrollbar-dir), var(--scrollbar-gradient));
       background-blend-mode: multiply, normal, normal;
+
+    }
+
+    @media (forced-colors: active) {
+      ::-webkit-scrollbar-thumb {
+        background: CanvasText !important;
+      }
     }
 
     ::-webkit-scrollbar-thumb:window-inactive {
@@ -141,6 +148,13 @@
       border-left: 1px solid var(--border-color);
       background: var(--arrow-bg) center no-repeat,
         linear-gradient(to var(--button-dir), var(--button-gradient));
+    }
+    
+    @media (forced-colors: active) {
+      ::-webkit-scrollbar-button {
+        background: var(--arrow-bg) center no-repeat,
+          linear-gradient(to var(--button-dir), white, white) !important;
+      }
     }
 
     ::-webkit-scrollbar-button:active {

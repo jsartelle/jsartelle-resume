@@ -122,8 +122,10 @@
   }
 
   &:focus-visible:not(:active) {
-    outline: none;
-    box-shadow: var(--inset-shadow), var(--focus-box-shadow);
+    @media (forced-colors: none) {
+      outline: none;
+      box-shadow: var(--inset-shadow), var(--focus-box-shadow);
+    }
   }
 
   &:enabled:active {
@@ -135,6 +137,12 @@
     [popover] & {
       background-color: transparent !important;
       box-shadow: inset 0 0 1px 1.5px rgba(0, 0, 0, 0.25), 0 1px 1px white;
+    }
+  }
+
+  @media (forced-colors: active) {
+    &:enabled {
+      border: 1px solid ButtonBorder;
     }
   }
 }

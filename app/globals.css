@@ -217,6 +217,9 @@
 
   h1 {
     font-size: calc(1rem * pow(var(--font-scale), 8));
+    @media print {
+      font-size: calc(1rem * pow(var(--font-scale), 7));
+    }
   }
   h2 {
     font-size: calc(1rem * pow(var(--font-scale), 7));
@@ -226,6 +229,9 @@
   }
   h4 {
     font-size: calc(1rem * pow(var(--font-scale), 5));
+    @media print {
+      font-size: calc(1rem * pow(var(--font-scale), 4));
+    }
   }
   h5 {
     font-size: calc(1rem * pow(var(--font-scale), 4));

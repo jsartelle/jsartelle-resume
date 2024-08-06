@@ -104,6 +104,11 @@
 .aboutImage {
   align-self: center;
   border-radius: 50%;
+
+  @media print {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .aboutDownloadLink {

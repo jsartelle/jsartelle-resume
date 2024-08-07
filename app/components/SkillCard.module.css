@@ -114,6 +114,7 @@
 
   @media screen {
     :global(.window-inactive) &::after {
+      animation-play-state: paused;
       filter: saturate(0) brightness(1.25);
     }
   }

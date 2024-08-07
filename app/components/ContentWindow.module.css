@@ -5,6 +5,7 @@
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
+  background: var(--pinstripe-bg);
   background-color: white;
 
   @media screen {
@@ -50,7 +51,7 @@
 
   @media screen {
     :global(.window-inactive) & {
-      background: var(--pinstripe-bg);
+      background: transparent;
       color: var(--text-secondary);
     }
   }
@@ -180,7 +181,6 @@
   flex-grow: 1;
   overflow: auto;
   padding: 1rem;
-  background: var(--pinstripe-bg);
 
   @media print {
     background: #ebecec;

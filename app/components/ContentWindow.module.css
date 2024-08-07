@@ -129,7 +129,7 @@
     }
   }
 
-  &:enabled:active {
+  &:active:not([popover] &:disabled) {
     filter: brightness(0.75);
   }
 
